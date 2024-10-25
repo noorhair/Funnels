@@ -1,0 +1,26 @@
+@import "@mixins";
+@import "@sassVariables";
+
+.bottomHeding {
+    background: $usds-main-color;
+    text-align: center;
+    line-height: 1.4;
+    margin: 0px;
+    padding: 20px 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    @include mobile {
+        font-size: 21px;
+    }
+}
+
+.bottomShipmentImg {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+
+    @include mobile {
+        width: 100%;
+    }
+}

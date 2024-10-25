@@ -1,0 +1,33 @@
+@import "@mixins";
+@import "@sassVariables";
+
+.header {
+    margin: 0 auto;
+}
+
+.background {
+    background: $usds-main-color;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 280px;
+    margin: 15px 0;
+
+}
+
+.steps {
+    max-width: 50%;
+    padding: 10px 0;
+    display: block;
+    margin: 0 auto;
+
+    @include tablet {
+        max-width: 80%;
+    }
+
+    @include mobile {
+        max-width: 90%;
+    }
+}

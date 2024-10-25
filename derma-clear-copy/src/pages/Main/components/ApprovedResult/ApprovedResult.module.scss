@@ -1,0 +1,29 @@
+@import "@sassVariables";
+@import "@mixins";
+
+.approvedResult {
+    padding-bottom: 30px;
+
+    .header {
+        padding-top: 30px;
+    }
+
+    img {
+        max-width: 650px;
+        margin: 30px auto;
+
+        @include tablet {
+            max-width: 90%;
+        }
+
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+
+    .text {
+        text-align: left;
+        padding: 10px 0;
+    }
+
+}

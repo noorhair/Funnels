@@ -1,0 +1,66 @@
+@import "@mixins";
+
+.inputContainer {
+    width: 100%;
+    position: relative;
+    line-height: 14px;
+}
+
+.field_with_error .error_text {
+    opacity: 1 !important;
+}
+
+.field_with_error .div_input {
+    box-shadow: 0 0 0 1px red !important;
+    border-color: red !important;
+}
+
+.input_with_value input:not(:focus) {
+    background-image: url("../../assets/images/icon-valid.webp");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+
+.inputContainer .div_input {
+    width: 100%;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.inputContainer .div_input:focus-within {
+    box-shadow: 0 0 0 1px #1b73b0;
+    border-color: #1b73b0;
+}
+
+.inputContainer .div_input input {
+    width: 100%;
+    font-size: 14px;
+    color: #000;
+    transition: all 0.3s ease;
+
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #666;
+    font-size: 15px;
+    font-weight: 400;
+    height: 35px;
+    line-height: 20px;
+    padding: 0;
+    text-indent: 10px;
+    width: 100%;
+    letter-spacing: 0.5px;
+}
+
+.inputContainer .error_text {
+    font-size: 12px;
+    line-height: 15px;
+    color: red;
+    opacity: 0;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0px !important;
+}

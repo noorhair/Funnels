@@ -1,0 +1,62 @@
+@import "@sassVariables";
+@import "@mixins";
+
+.header {
+    background: #fff;
+    box-shadow: 0 0 8px #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 500;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.outerSubmitBtn {
+    padding: 10px 24px;
+}
+
+.leftSection {
+    display: flex;
+}
+
+.rightSection {
+    display: flex;
+    gap: 30px;
+}
+
+.rightSectionText {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.outerStyles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.topText {
+    color: $black-color;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.bottomText {
+    color: $black-color;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+
+    span {
+        color: $main-color;
+    }
+}

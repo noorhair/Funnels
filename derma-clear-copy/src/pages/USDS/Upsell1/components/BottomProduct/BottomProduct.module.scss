@@ -1,0 +1,16 @@
+@import "@mixins";
+@import "@sassVariables";
+
+.productImg {
+    width: 60%;
+    margin: 20px auto;
+
+    @include mobile {
+        width: 95%;
+        margin: 10px auto;
+    }
+}
+
+.container {
+    margin-bottom: 20px;
+}

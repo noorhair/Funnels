@@ -1,0 +1,23 @@
+@import "@sassVariables";
+@import "@mixins";
+
+.tableContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 80px;
+
+    .header {
+        margin-bottom: 40px;
+
+        @include mobile {
+            margin-bottom: 10px;
+        }
+    }
+
+    @include mobile {
+        margin-bottom: 20px;
+        padding-bottom: 30px;
+    }
+}

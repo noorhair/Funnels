@@ -1,0 +1,73 @@
+@import "@sassVariables";
+@import "@mixins";
+
+.eliminate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .header {
+        padding-bottom: 0;
+    }
+
+    &::before {
+        background: $main-bkgnd;
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 100%;
+        z-index: -5;
+    }
+
+    .list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 20px;
+        padding-inline-start: 0;
+
+        .listItem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+
+            img {
+                display: block;
+
+                @include tablet {
+                    width: 130px;
+                    height: 130px;
+                }
+            }
+
+            p {
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 32px;
+                padding: 0 0 20px;
+            }
+
+            @include tablet {
+                gap: 15px;
+            }
+        }
+
+        @include tablet {
+            list-style: none;
+            flex-wrap: wrap;
+            padding-inline-start: 0;
+            row-gap: 20px;
+            column-gap: 60px;
+        }
+
+        @include mobile {
+            row-gap: 0px;
+            column-gap: 30px;
+        }
+    }
+}

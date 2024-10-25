@@ -1,0 +1,31 @@
+@import "@mixins";
+@import "@sassVariables";
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(222, 116, 116, 1);
+    }
+
+    100% {
+        box-shadow: 0 0 0 30px rgba(222, 116, 116, 0.1);
+    }
+}
+
+.button {
+    box-shadow: 0 0 0 0 rgb(232 76 61 / 70%);
+    display: block;
+    background: linear-gradient(180deg, rgba(222, 116, 116, 1) 0%, rgba(247, 34, 16, 1) 60%);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 54px;
+    border-radius: 10px;
+    padding: 20px 15px;
+    border: none;
+    animation: pulse 1s infinite cubic-bezier(0.66, 0, 0, 1);
+    cursor: pointer;
+}

@@ -1,0 +1,110 @@
+@import "@mixins";
+@import "@sassVariables";
+
+.footerStyling {
+    &:before {
+        background: $usds-main-color;
+    }
+}
+
+
+.redHead {
+    color: $usds-announce-color;
+    line-height: 1;
+    margin: 20px 0px 0px;
+    padding: 10px;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: center;
+
+    @include mobile {
+        font-size: 21px;
+        padding: 0;
+
+    }
+}
+
+.head {
+    font-size: 25px;
+    text-align: center;
+    line-height: 1.47;
+    font-weight: 700;
+    padding: 10px 0;
+
+    @include mobile {
+        font-size: 18px;
+        padding: 10px;
+
+    }
+}
+
+.italicProductBlock {
+    font-size: 26px;
+    line-height: 1.47;
+    padding: 0 5px;
+    margin-top: 20px;
+}
+
+.underscoreProductBlock {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #9C7029;
+    text-decoration-thickness: 2px;
+}
+
+.topProductBlock {
+    margin-top: 40px;
+}
+
+.todayBlock {
+    margin-top: 30px;
+    font-size: 24px;
+
+    @include mobile {
+        line-height: 1.5;
+    }
+}
+
+.onlyToday {
+    color: $usds-price-color;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.productImg {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.productName {
+    font-size: 30px;
+    line-height: 1.5;
+    margin: 20px 0px 0px;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.yellowText {
+    background-color: $usds-yellow-color;
+}
+
+.greenText {
+    color: $usds-price-color;
+}
+
+.pantAcid {
+    width: 45%;
+    margin: 0 auto;
+
+    @include mobile {
+        width: 90%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}

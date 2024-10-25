@@ -1,0 +1,373 @@
+@import "@sassVariables";
+@import "@mixins";
+
+.offer {
+    margin-top: 60px;
+
+    .coupon {
+        width: 100%;
+        margin: 40px auto 10px;
+        position: relative;
+
+        h2 {
+            display: block;
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+            background: #fff;
+            position: relative;
+            z-index: 2;
+        }
+
+        &:before {
+            content: "";
+            display: block;
+            height: 0;
+            border-bottom: 2px dashed #919191;
+            width: 100%;
+            background: #F2F2F2;
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @include mobile {
+                border-bottom: none;
+            }
+        }
+
+        &:after {
+            content: " ";
+            width: 50px;
+            height: 37px;
+            background: url("../../../../assets/images/Advertorial/offer_label.webp") no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            z-index: 2;
+
+            @include tablet {
+                background: none;
+            }
+        }
+    }
+
+    .claim {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        color: $adv-main-color;
+        text-align: center;
+    }
+
+    .note {
+        font-size: 20px;
+        line-height: 29px;
+        text-align: center;
+        margin: 20px auto 10px;
+        padding: 5px 0;
+        background: yellow;
+
+        @include tablet {
+            padding: 5px 10px;
+        }
+    }
+
+    .stockUpdate {
+        border: 1px dotted #000;
+        background: #EFFFF7;
+        padding: 4px 9px;
+        margin: 15px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include tablet {
+            gap: 10px;
+        }
+
+        img {
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+
+    .stockMsg {
+        margin: 0 !important;
+
+        span {
+            color: $adv-main-color;
+        }
+    }
+
+    .featuresWrapper {
+        box-shadow: 0 0 10px;
+        border: 3px solid red;
+        border-radius: 10px;
+        text-align: center;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        .text {
+            font-size: 20px;
+            line-height: 29px;
+            margin-bottom: 10px;
+        }
+
+        .wheel {
+            margin: 0 auto;
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            cursor: pointer;
+
+            .wheelCoursor {
+                position: absolute;
+                width: 150px !important;
+                height: 150px;
+                top: 32%;
+                left: 31%;
+
+                @include mobile {
+                    top: 32%;
+                    left: 28%;
+                }
+            }
+
+            .coursorText {
+                display: inline-block;
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                line-height: 70px;
+                border-radius: 50%;
+                vertical-align: middle;
+                text-align: center;
+                background-color: #ccc;
+                border: 1px solid #ccc;
+                top: 27%;
+                left: 27%;
+                font-size: 12px;
+                background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0, rgba(234, 234, 234, 1) 100%);
+
+                @include mobile {
+                    top: 27%;
+                    left: 27%;
+                }
+            }
+        }
+    }
+
+
+    .offerPopupWrapper {
+        padding: 0 10px;
+        width: 100%;
+        top: 0;
+        z-index: 999;
+        left: 0;
+        height: 100%;
+        position: fixed;
+        background-color: rgba(0, 0, 0, .6);
+        text-align: center;
+
+        .offerPopup {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            right: 0;
+            left: 0;
+            top: 50%;
+            margin: 0 auto;
+            background: #fff none repeat scroll 0 0;
+            text-align: center;
+            padding: 10px;
+            padding-top: 70px;
+            padding-bottom: 20px;
+            border-radius: 10px;
+            animation: .7s ease 0s normal none 1 running pop-up-appear;
+            transform: translateY(-50%);
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 110px;
+                height: 110px;
+                top: -55px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                background-color: #71c341;
+                border-radius: 50%;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                width: 50px;
+                height: 20px;
+                top: -20px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                border-width: medium medium 4px 4px;
+                border-style: none none solid solid;
+                border-color: currentcolor currentcolor #fff #fff;
+                border-image: none;
+                transform: rotate(-45deg);
+                transition: opacity 1s ease 0s;
+            }
+
+            .header {
+                font-size: 37px;
+                margin-bottom: 20px;
+            }
+
+            .message {
+                font-size: 22px;
+                line-height: 30px;
+                text-align: center;
+
+                small {
+                    font-size: 14px;
+                }
+            }
+
+            .closePopup {
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 10px;
+                font-size: 20px;
+                border-radius: 5px;
+                background-color: #71c341;
+                color: #fff !important;
+                border: medium none;
+                cursor: pointer;
+                outline: medium none;
+                display: block;
+                width: 100%;
+                max-width: 200px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .offerWrapper {
+        padding: 20px 10px;
+    }
+
+    .orderOffer {
+        display: flex;
+        background: #EFFFF7;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        .orderImg {
+            max-width: 400px;
+            width: 35%;
+            margin: 40px 0;
+
+            @include mobile {
+                width: 70%;
+                margin-top: 30px;
+                margin-bottom: 0;
+            }
+        }
+
+        .orderContent {
+            display: flex;
+            flex-direction: column;
+
+            @include tablet {
+                align-items: center;
+                padding: 20px 0;
+            }
+        }
+
+
+    }
+
+    .checkMark {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+        padding-left: 30px;
+        position: relative;
+
+        @include mobile {
+            padding-left: 0;
+        }
+
+        .checkMarkText {
+            color: $adv-main-color;
+            text-decoration: underline;
+            margin-bottom: 0 !important;
+        }
+    }
+
+    .boldText {
+        margin-bottom: 0;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+
+        @include mobile {
+            padding: 0 10px;
+        }
+    }
+
+    .orderButton {
+        margin: 10px 0;
+
+
+        @include tablet {
+            font-size: 24px;
+            padding: 10px;
+        }
+
+        @include mobile {
+            font-size: 20px;
+            width: 92%;
+        }
+    }
+
+    .yellowText {
+        background: yellow;
+        margin: 10px 0;
+        font-size: 20px;
+        line-height: 29px;
+        text-align: center;
+        padding: 5px 15px;
+
+        @include tablet {
+            width: 90%;
+        }
+
+        @include mobile {
+            font-size: 18px;
+            line-height: 26px;
+
+        }
+
+        span {
+            color: $adv-main-color;
+            text-decoration: underline;
+        }
+
+
+    }
+}

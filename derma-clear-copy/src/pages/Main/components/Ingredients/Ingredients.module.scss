@@ -1,0 +1,152 @@
+@import "@mixins";
+@import "@sassVariables";
+
+.ingredients {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+        background-color: #f7f7f7;
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 100%;
+        z-index: -5;
+    }
+
+    .ingredientsHeader {
+        color: $main-color;
+        font-size: 40px;
+        letter-spacing: -1px;
+        line-height: 40px;
+        padding: 80px 0px 23px;
+        font-weight: 700;
+        text-align: center;
+
+        @include tablet {
+            font-size: 30px;
+            line-height: 38px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .ingredientsHeaderText {
+        text-align: center;
+        width: 100%;
+        padding: 0 0 20px;
+    }
+
+    .chevron {
+        height: 30px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    .images {
+        top: 26%;
+        left: -20%;
+        position: absolute;
+        max-width: 55%;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    .panelsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+
+        @include tablet {
+            align-items: center;
+        }
+
+        .panel {
+            display: flex;
+            background: #ededed;
+            width: 80%;
+            justify-content: flex-end;
+            gap: 20px;
+            padding: 20px;
+
+            @include tablet {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            img {
+                width: 150px;
+                height: 150px;
+
+                @include tablet {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            .textContainer {
+                .header {
+                    font-size: 24px;
+                    line-height: 32px;
+                    font-weight: 700;
+                    padding: 0 0 4px;
+                }
+
+                .text {
+                    // font-size: 20px;
+                    line-height: 26px;
+                    padding: 3px 40px 0 0px;
+                    width: 510px;
+
+                    sup {
+                        -webkit-text-size-adjust: 100%;
+                        text-align: left;
+                        font-weight: bolder;
+                        top: -.5em;
+                        font-size: 10px;
+                        line-height: 0;
+                    }
+
+
+                    @include tablet {
+                        width: 100%;
+                        padding: 0;
+                    }
+                }
+
+                @include tablet {
+                    text-align: center;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .outerSubmitBtn {
+        align-self: center;
+        padding: 15px 25px;
+        margin-bottom: 50px;
+        line-height: 30px;
+        width: 380px;
+
+        @include tablet {
+            width: 320px;
+            padding: 10px 15px;
+
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import "@mixins";
+
+.image {
+    width: 50%;
+
+    @include mobile {
+        width: 80%;
+    }
+}
+
+.yellowText {
+    padding: 15px 10px;
+    background-color: #FFFCC9;
+    font-weight: 700;
+}

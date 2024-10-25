@@ -1,0 +1,15 @@
+@import "@mixins";
+@import "@sassVariables";
+
+
+.container {
+    width: 80%;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.quote {
+    font-weight: 700;
+    margin-bottom: 5px;
+}

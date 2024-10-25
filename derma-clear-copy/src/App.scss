@@ -1,0 +1,12 @@
+@import "./styles/fonts.scss";
+@import "./styles/reset.scss";
+@import "@sassVariables";
+
+
+body {
+    font-family: "OpenSans-Regular", sans-serif;
+    color: $text-color;
+    font-size: 20px;
+    line-height: 28px;
+    overflow-x: hidden;
+}

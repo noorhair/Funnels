@@ -1,0 +1,25 @@
+@import "@mixins";
+@import "@sassVariables";
+
+.header {
+    color: $main-color;
+    letter-spacing: -1px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 20px;
+
+    @include tablet {
+        font-size: 30px;
+        line-height: 38px;
+        padding-bottom: 20px;
+        padding-top: 40px;
+
+    }
+
+    @include mobile {
+        padding-top: 30px;
+    }
+}

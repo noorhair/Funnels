@@ -1,0 +1,39 @@
+@mixin flex($justify: flex-start,
+    $align: center,
+    $gap: 0px,
+    $direction: row,
+    $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    gap: $gap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin font($size, $weight: normal, $color: inherit, $family: inherit, $style: normal, $line-height: normal) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+    line-height: $line-height;
+    color: $color;
+}
+
+@mixin laptop {
+    @media only screen and (max-width: 1140px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (max-width: 850px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media only screen and (max-width: 460px) {
+        @content;
+    }
+}

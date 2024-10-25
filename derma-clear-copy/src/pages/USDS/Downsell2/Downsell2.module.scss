@@ -1,0 +1,180 @@
+@import "@mixins";
+@import "@sassVariables";
+
+.footerStyling {
+    &:before {
+        background: $usds-main-color;
+    }
+}
+
+.heading {
+    margin: 20px 0px;
+    padding: 10px;
+    font-size: 48px;
+    line-height: 1.5;
+    font-weight: 700;
+    text-align: center;
+
+    @include mobile {
+        font-size: 28px;
+    }
+}
+
+.topText {
+    font-size: 32px;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.underHeading {
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.underlineBrown {
+    text-decoration: underline;
+    text-decoration-color: $usds-decline-color;
+    text-decoration-thickness: 2px;
+}
+
+.italicProductBlock {
+    font-size: 26px;
+    line-height: 1.47;
+    padding: 0 5px;
+    margin-top: 20px;
+}
+
+.underscoreProductBlock {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #9C7029;
+    text-decoration-thickness: 2px;
+}
+
+.topProductBlock {
+    margin-top: 40px;
+}
+
+.productImg {
+    width: 60%;
+    margin: 0 auto;
+
+    @include mobile {
+        width: 90%;
+    }
+}
+
+.productName {
+    font-size: 32px;
+    line-height: 1.5;
+    margin: 20px 0px 0px;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.greenText {
+    color: $usds-price-color;
+}
+
+.redText {
+    color: $usds-announce-color;
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.oldPrice {
+    font-size: 40px;
+    text-decoration: line-through;
+    text-decoration-color: red;
+    text-decoration-thickness: 2px;
+    margin: 20px 0;
+}
+
+.newPrice {
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.yesBtn {
+    border: 0;
+    border-radius: 10px;
+    margin: 20px 0px 0px;
+    padding: 15px 20px;
+    background-color: $usds-submit-color;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.yesLnk {
+    color: rgb(0, 0, 255);
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 21px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.paymentsImg {
+    width: 210px;
+    margin: 0 auto;
+
+    @include mobile {
+        width: 220px;
+    }
+}
+
+.yesLnkRestricted {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.yesBtnRestricted {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.noBtn {
+    border-width: 0px;
+    display: block;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: $usds-decline-color;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.noText {
+    font-size: 26px;
+    line-height: 1.5;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+
+    @include mobile {
+        font-size: 19px;
+    }
+}

@@ -1,0 +1,17 @@
+@import "@sassVariables";
+@import "@mixins";
+
+.logoContainer {
+    display: none;
+
+    @include mobile {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .logoMobile {
+        margin: 0 auto;
+        width: 60%;
+        padding: 5px 0;
+    }
+}

@@ -1,0 +1,44 @@
+@import "@mixins";
+@import "@sassVariables";
+
+.header {
+
+
+    .outerStyles {}
+
+    .subheader {
+        background: $main-color;
+        font-size: 17px;
+        color: #fff;
+        padding: 3px 0;
+        font-weight: 700;
+        text-align: center;
+
+        @include mobile {
+            font-size: 14px;
+
+        }
+    }
+
+    .imgContainer {
+        border-bottom: 4px solid $main-color;
+
+        img {
+            margin: 0 auto;
+            width: 65%;
+
+            @include mobile {
+                width: 95%;
+                padding: 5px 0;
+            }
+        }
+
+        @include mobile {
+            width: 100vw;
+            background-color: #ffffff;
+            transform: translateX(-50%);
+            position: relative;
+            left: 50%;
+        }
+    }
+}

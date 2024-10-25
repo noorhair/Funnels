@@ -1,0 +1,65 @@
+@import "@sassVariables";
+@import "@mixins";
+
+.badge {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin: 40px 10px;
+
+    &:nth-child(1) {
+        @include tablet {
+            margin-bottom: 20px;
+        }
+    }
+
+    @include tablet {
+        margin: 0;
+    }
+
+    .header {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        text-align: center;
+
+        @include tablet {
+            font-size: 20px;
+            height: 44px;
+        }
+
+        @include mobile {
+            height: 44px;
+        }
+    }
+
+    img {
+        width: 150px;
+        height: 150px;
+    }
+
+    button {
+        border: 1px solid #999;
+        border-radius: 4px;
+        background-color: #fff;
+        color: #888;
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        height: 45px;
+        line-height: 20px;
+        text-align: center;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        width: 135px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $main-color;
+            color: #fff;
+        }
+    }
+}

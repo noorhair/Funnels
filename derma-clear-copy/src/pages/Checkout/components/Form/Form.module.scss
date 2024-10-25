@@ -1,0 +1,146 @@
+@import "@sassVariables";
+@import "@mixins";
+
+.formContainer {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .form {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .footer {
+        height: 100%;
+
+        img {
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .outerSubmitBtn {
+        margin: 10px;
+        width: 90%;
+        padding: 12px 0;
+        text-decoration: none;
+        color: $main-color;
+    }
+
+    label {
+        line-height: 15px;
+    }
+
+}
+
+.mobileSection {
+    display: none;
+    width: 90%;
+    margin: 30px auto;
+
+    .form {
+        margin: 0 auto;
+    }
+
+    .outerSubmitBtn {
+        margin: 20px;
+    }
+
+    .footer {
+        img {
+            width: 75%;
+        }
+    }
+
+    @include tablet {
+        display: flex;
+    }
+}
+
+.billing_form_content {
+    padding: 17px;
+    background-color: #fafafa;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+
+    >div {
+        grid-column: span 6;
+    }
+
+    >div:nth-child(2),
+    >div:nth-child(3) {
+        grid-column: span 3;
+    }
+
+}
+
+.product_card {
+    @include flex(center, center, 10px, column);
+    width: 100%;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid rgb(197, 199, 210);
+
+    p {
+        @include flex(space-between, center);
+        @include font(14px, 400, black);
+        width: 100%;
+        padding: 5px 0px;
+    }
+
+    p:first-child {
+        margin-bottom: 10px;
+    }
+
+    p:nth-child(3) {
+        color: red;
+    }
+
+    p:last-child {
+        border-top: 1px solid rgb(197, 199, 210);
+        padding-top: 18px;
+        margin-top: 10px;
+    }
+}
+
+.button {
+    border-radius: 3px;
+    padding: 15px 40px;
+    background-color: rgb(92, 184, 92);
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0;
+    cursor: pointer;
+    border: none;
+    box-shadow: rgb(37 42 50 / 32%) 0 1px 4px 1px;
+    transition: all ease-in-out 0.3s;
+}
+
+.button:hover {
+    background-color: #4ac649;
+}
+
+.finalParagraph {
+    font-size: 13px;
+    color: #000;
+    text-align: left;
+    padding-bottom: 20px;
+    line-height: 8px;
+}

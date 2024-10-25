@@ -1,0 +1,55 @@
+@import "@sassVariables";
+@import "@mixins";
+
+.orderButton {
+    font-weight: 800;
+    font-size: 34px;
+    padding: 0 5px;
+    background-color: $btn-bkgrnd;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    letter-spacing: -.5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .4s;
+    text-align: center;
+
+    @include tablet {
+        font-size: 24px;
+    }
+
+    span {
+        display: block;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 18px;
+        text-transform: none;
+        padding: 5px 0;
+
+        @include tablet {
+            padding: 0;
+            font-size: 16px;
+        }
+    }
+
+    &.label {
+        display: block;
+        top: 0;
+        right: 0;
+        background: url("../../assets/images/riskFreeIcon.webp");
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-color: $btn-bkgrnd;
+        background-size: 47px;
+    }
+
+}
+
+.orderButton:hover {
+    color: #ffffff;
+
+}

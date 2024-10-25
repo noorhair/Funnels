@@ -1,0 +1,231 @@
+@import "@sassVariables";
+@import "@mixins";
+
+.hero {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 100%;
+        z-index: -5;
+    }
+
+    @include tablet {
+        justify-content: space-around;
+    }
+
+    @include mobile {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .leftSection {
+        .logoTablet {
+            display: none;
+
+            @include tablet {
+                display: flex;
+                align-self: center;
+                margin-top: 30px;
+                width: 200px;
+                height: 70px;
+            }
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 20px;
+            padding-top: 50px;
+
+            @include mobile {
+                display: none;
+            }
+
+            h1 {
+                font-size: 36px;
+                font-weight: 800;
+                letter-spacing: 1px;
+                width: 430px;
+                color: $main-color;
+                line-height: 40px;
+                padding-bottom: 20px;
+
+                @include tablet {
+                    font-size: 26px;
+                    line-height: 28px;
+                    text-align: center;
+                    letter-spacing: 0;
+                    margin: 20px;
+                    padding: 0;
+                    max-width: 210px;
+                }
+            }
+
+            p {
+                font-size: 18px;
+                width: 385px;
+                padding-bottom: 50px;
+
+                @include tablet {
+                    display: none;
+                }
+            }
+
+            @include tablet {
+                padding-left: 0;
+                font-size: 26px;
+                line-height: 28px;
+                text-align: center;
+                letter-spacing: 0;
+                margin: 0;
+                padding: 0;
+                max-width: 180px;
+            }
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            margin-left: -100px;
+            margin-top: -40px;
+            gap: 10px;
+
+            .images {
+                width: 30%;
+
+                @include tablet {
+                    display: none;
+                }
+            }
+
+            .list {
+                margin-left: -30px;
+                width: 25%;
+            }
+
+            @include tablet {
+                flex-direction: column;
+                margin: 0;
+            }
+        }
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+    }
+
+    .rightSection {
+        display: flex;
+        flex-direction: column;
+        margin-left: -740px;
+
+        @include tablet {
+            margin: 0;
+            align-items: center;
+            width: 60%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        .icons {
+            width: 256px;
+            z-index: 5;
+
+            @include tablet {
+                display: none;
+            }
+        }
+
+        .image {
+            margin-top: -30px;
+
+            @include tablet {
+                margin: 0;
+                width: 100%;
+            }
+
+            @include mobile {
+                width: 105%;
+            }
+
+        }
+
+        .imagesTablet {
+            display: none;
+
+            @include tablet {
+                display: block;
+                margin: 0;
+                align-items: center;
+                width: 90%;
+                margin-top: -5px;
+            }
+
+            @include mobile {
+                width: 100%;
+                margin-top: -40px;
+
+            }
+        }
+
+
+    }
+
+    .formContainer {
+        position: absolute;
+        right: 0;
+        width: 285px;
+
+        .header {
+            background: $main-bkgnd;
+
+        }
+
+        @include tablet {
+            display: none;
+        }
+    }
+}
+
+.textMobile {
+    display: none;
+
+    @include mobile {
+        display: block;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        line-height: 1.25
+    }
+}
+
+.orderButtonMobile {
+    display: none;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+
+    @include mobile {
+        display: block;
+    }
+}

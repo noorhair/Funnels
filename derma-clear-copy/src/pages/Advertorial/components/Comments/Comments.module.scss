@@ -1,0 +1,65 @@
+@import "@sassVariables";
+@import "@mixins";
+
+.container {
+    font-size: 14px;
+    line-height: 18px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 15px;
+
+    .top {
+        display: flex;
+        gap: 10px;
+
+        .authorImg {
+            max-width: 50px;
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .authorInfo {
+            .author {
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+
+            .time {
+                color: #A8ABAE;
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    blockquote.quote {
+        display: block;
+        margin-left: 60px;
+        margin-bottom: 10px;
+
+        @include mobile {
+            margin-left: auto;
+            margin-top: 10px;
+        }
+    }
+
+    .feedbackImg {
+        margin-left: 60px;
+        width: 70%;
+
+        @include mobile {
+            width: 100%;
+            display: block;
+            margin-left: 0;
+        }
+    }
+}
+
+.reply {
+    padding-left: 50px;
+    border-bottom: none;
+}
+
+.lastReply {
+    border-bottom: 1px solid #ebebeb;
+}

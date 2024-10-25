@@ -1,0 +1,14 @@
+@import "@mixins";
+@import "@sassVariables";
+
+.image {
+    margin: 40px auto;
+    border-top: 5px solid $adv-main-color;
+    max-width: 600px;
+    width: 80%;
+
+    @include mobile {
+        margin: 35px auto;
+        border-top: 4px solid $adv-main-color;
+    }
+}

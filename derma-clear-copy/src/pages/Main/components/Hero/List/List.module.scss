@@ -1,0 +1,76 @@
+@import "@sassVariables";
+@import "@mixins";
+
+.list {
+    list-style: none;
+    margin-left: -50px;
+    padding-inline-start: 10px;
+    // copy specific styles
+    width: 25%;
+
+    @include tablet {
+        width: 90%;
+    }
+
+    @include mobile {
+        margin-left: -30px;
+    }
+
+    .listItem {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+        align-items: center;
+
+        .listIcon {
+            width: 45px;
+            height: 45px;
+
+            @include tablet {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .listText {
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: 0.3px;
+            font-size: 20px;
+            border-bottom: 1px solid $main-color;
+            width: 100%;
+            line-height: 25px;
+            color: $main-color;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            sup {
+                -webkit-text-size-adjust: 100%;
+                text-align: left;
+                font-weight: bolder;
+                top: -.5em;
+                font-size: 10px;
+                line-height: 0;
+            }
+
+            @include tablet {
+                font-size: 15px;
+                line-height: 21px;
+                letter-spacing: -0.5;
+            }
+
+            .textTitle {
+                line-height: 25px;
+                color: $main-color;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            p {
+                color: #2d2d2d;
+            }
+        }
+    }
+
+
+}

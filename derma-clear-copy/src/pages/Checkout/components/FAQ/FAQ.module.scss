@@ -1,0 +1,53 @@
+@import "@mixins";
+
+.faq {
+    margin-bottom: 60px;
+    margin: 0 auto;
+
+    .faqContainer {
+        padding-inline-start: 40px;
+        width: 100%;
+        list-style: none;
+        list-style-type: none;
+
+        @include tablet {
+            padding-inline-start: 0px;
+
+        }
+    }
+
+    li:first-child {
+        summary {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+    }
+
+    details summary::-webkit-details-marker {
+        display: none;
+    }
+
+    @include tablet {
+        margin-bottom: 20px;
+    }
+
+    &Item {
+        list-style: none;
+        margin: 5px 0;
+        content: "";
+        list-style-type: none;
+
+        @include mobile {
+            font-size: 20px;
+        }
+
+        sup {
+            -webkit-text-size-adjust: 100%;
+            text-align: left;
+            font-weight: bolder;
+            top: -.5em;
+            font-size: 10px;
+            line-height: 0;
+        }
+    }
+}

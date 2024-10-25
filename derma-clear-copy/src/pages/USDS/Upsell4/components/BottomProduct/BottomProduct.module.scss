@@ -1,0 +1,49 @@
+@import "@mixins";
+@import "@sassVariables";
+
+
+.heading {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: underline;
+    padding: 20px 0;
+}
+
+.productName {
+    font-size: 26px;
+    line-height: 1.3em;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.productImg {
+    width: 95%;
+    margin: 20px auto;
+
+    @include mobile {
+        width: 95%;
+        margin: 10px auto;
+    }
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+.noText {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.5;
+    cursor: pointer;
+
+    span {
+        color: darkblue;
+        text-decoration: underline;
+        font-weight: 600;
+        font-style: italic;
+    }
+
+}

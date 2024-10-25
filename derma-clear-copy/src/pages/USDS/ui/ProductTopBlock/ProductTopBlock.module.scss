@@ -1,0 +1,14 @@
+@import "@mixins";
+@import "@sassVariables";
+
+.container {
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(27, 40, 29);
+    border-radius: 8px;
+    margin: 10px 0px 0px;
+    padding: 0px 15px 20px;
+    background-color: $usds-main-color;
+    text-align: center;
+    margin-bottom: 40px;
+}

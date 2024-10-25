@@ -1,0 +1,9 @@
+@import "@mixins";
+
+.image {
+    max-width: 50%;
+
+    @include mobile {
+        max-width: 80%;
+    }
+}

@@ -1,0 +1,110 @@
+@import "@mixins";
+@import "@sassVariables";
+
+.productBlock {
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    .productImg {
+        width: 45%;
+
+        @include mobile {
+            padding-top: 10px;
+            width: 80%;
+
+        }
+    }
+
+    .productContent {
+        margin: 20px 0;
+
+        .redText {
+            font-size: 16px;
+            line-height: 1.5;
+            color: $usds-announce-color;
+            margin-bottom: 10px;
+        }
+
+        .redLineThrough {
+            font-size: 16px;
+            text-decoration: line-through;
+            text-decoration-color: red;
+            text-decoration-thickness: 2px;
+            margin-bottom: 10px;
+
+        }
+
+        .message {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .price {
+            color: $usds-decline-color;
+            font-size: 40px;
+            margin-bottom: 10px;
+
+        }
+
+        .heading {
+            font-size: 24px;
+            margin-bottom: 10px;
+
+        }
+
+        .yesBtn {
+            border: 0;
+            border-radius: 10px;
+            margin: 20px 0px 0px;
+            padding: 15px;
+            background-color: $usds-submit-color;
+            cursor: pointer;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .yesLnk {
+            color: rgb(0, 0, 255);
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 21px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .paymentsImg {
+            width: 180px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+
+        .noBtn {
+            border-width: 0px;
+            border-radius: 10px;
+            margin: 20px 0px 0px;
+            padding: 15px;
+            background-color: $usds-decline-color;
+            cursor: pointer;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.noText {
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+}

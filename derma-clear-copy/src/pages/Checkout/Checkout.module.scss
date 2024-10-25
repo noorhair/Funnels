@@ -1,0 +1,186 @@
+@import "@mixins";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: white;
+
+    @include tablet {
+        flex-wrap: wrap;
+        width: 100%;
+
+    }
+
+
+    .left_section,
+    .right_section {
+        @include flex(center, center, 10px, column);
+        width: 90%;
+        padding: 0px 15px;
+
+        @include tablet {
+            width: 100%;
+            padding: 0px 10px;
+        }
+
+    }
+
+    .form_container {
+        @include flex(flex-start, flex-start, 10px, column);
+        width: 100%;
+
+        .title {
+            @include font(18px, bold, black);
+            width: 100%;
+            text-align: center;
+            padding: 8px 0px;
+
+            span {
+                color: rgb(127, 61, 22);
+            }
+        }
+
+        .customer_form_container {
+            @include flex(flex-start, flex-start, 15px, column);
+            width: 100%;
+        }
+
+        .delivery_form_container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+
+            >div {
+                grid-column: span 6;
+            }
+
+            >div:nth-child(3),
+            >div:nth-child(4) {
+                grid-column: span 3;
+            }
+        }
+
+
+        .billings_forms_container {
+            width: 100%;
+
+            .checkout_form_container {
+                width: 100%;
+                border-radius: 6px;
+
+                .header {
+                    @include flex(space-between, center);
+                    width: 100%;
+                    padding: 10px;
+                    background-color: white;
+                    width: 100%;
+                    border: 1px solid #d9d9d9;
+                    border-radius: 6px 6px 0px 0px;
+
+
+                    p {
+                        @include font(14px, bold, #737373);
+
+                        input {
+                            margin-right: 10px;
+                        }
+                    }
+
+                    .card_icons {
+                        @include flex(space-between, flex-start, 5px);
+
+                        width: 30%;
+                    }
+
+                }
+
+
+            }
+        }
+
+
+    }
+
+    .product_card {
+        @include flex(center, center, 10px, column);
+        width: 100%;
+        padding: 10px;
+        width: 100%;
+        border: 1px solid rgb(197, 199, 210);
+
+        p {
+            @include flex(space-between, center);
+            @include font(14px, 400, black);
+            width: 100%;
+            padding: 5px 0px;
+        }
+
+        p:first-child {
+            margin-bottom: 10px;
+        }
+
+        p:nth-child(3) {
+            color: red;
+        }
+
+        p:last-child {
+            border-top: 1px solid rgb(197, 199, 210);
+            padding-top: 18px;
+            margin-top: 10px;
+        }
+    }
+
+    .button {
+        border-radius: 3px;
+        padding: 15px 40px;
+        background-color: rgb(92, 184, 92);
+        width: 100%;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: rgb(37 42 50 / 32%) 0 1px 4px 1px;
+        transition: all ease-in-out 0.3s;
+    }
+
+    .button:hover {
+        background-color: #4ac649;
+    }
+}
+
+.topHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    background-color: #525a31;
+    position: relative;
+    border-radius: 10px;
+    padding: 10px 0;
+    margin: 10px 0;
+
+    @include mobile {
+        font-size: 14px;
+        padding: 3px 0;
+
+    }
+
+    img {
+        position: absolute;
+        right: 0;
+
+        @include mobile {
+            width: 50px;
+            right: -15px;
+        }
+    }
+}

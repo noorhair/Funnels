@@ -1,0 +1,123 @@
+@import "@mixins";
+@import "@sassVariables";
+
+@keyframes checkbox-animation {
+    0% {
+        transform: scale(.95);
+        box-shadow: 0 0 0 0 rgba(255, 255, 0, .8);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 15px rgba(255, 255, 0, 0);
+    }
+
+    100% {
+        transform: scale(.95);
+        box-shadow: 0 0 0 0 rgba(255, 255, 0, 0);
+    }
+}
+
+
+@keyframes pulsing {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.09);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: $usds-main-color;
+    border: 2px solid black;
+    padding: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    .topBox {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .checkboxContainer {
+        background: green;
+        padding: 8px;
+        margin-right: 6px;
+
+        .pulsingCheckbox {
+            outline: none;
+            content: none;
+            width: 2.6rem;
+            height: 2.6rem;
+            background: #fff;
+            display: grid;
+            place-content: center;
+            border-radius: 5px;
+            transform: scale(1);
+            animation: checkbox-animation .7s ease-in-out, pulsing .8s infinite;
+            animation-iteration-count: infinite;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+
+            &.checked {
+                animation: reset;
+                user-select: none;
+                outline: none !important;
+                accent-color: #fff;
+
+                &:before {
+                    transform: scale(1);
+                }
+            }
+
+            &:before {
+                content: "";
+
+                width: 2.6rem;
+                height: 2.6rem;
+                transform: scale(0);
+                transition: 20ms transform ease-in-out;
+                box-shadow: inset 3.5rem 3.5rem #3cc816;
+                clip-path: polygon(20% 35%, 5% 55%, 40% 90%, 95% 33%, 80% 7%, 40% 57%);
+            }
+        }
+    }
+
+    @include mobile {
+        font-size: 12px
+    }
+
+    .bottomText {
+        font-size: 16px;
+        line-height: 1.3em;
+        text-align: left;
+        margin-top: 16px;
+        color: rgb(33, 37, 41);
+    }
+}
+
+.checkedContainer {
+    border: 2px solid rgb(92, 184, 92);
+}
+
+.redText {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 5px;
+    color: red !important;
+}
+
+.hideRedText {
+    display: none;
+}

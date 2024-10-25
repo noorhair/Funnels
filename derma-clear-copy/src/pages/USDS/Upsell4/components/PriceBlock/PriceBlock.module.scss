@@ -1,0 +1,63 @@
+@import "@mixins";
+@import "@sassVariables";
+
+.price {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    line-height: 1.5;
+
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .value {
+            text-decoration: line-through;
+            text-decoration-color: red;
+            text-decoration-thickness: 2px;
+        }
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $usds-submit-color;
+
+        .title {
+            font-weight: 400;
+        }
+    }
+
+    .value {
+        font-size: 48px;
+        font-weight: 700;
+
+        @include mobile {
+            font-size: 40px;
+        }
+    }
+
+    .shipping {
+        font-size: 48px;
+        line-height: 1.4;
+        font-weight: 700;
+
+        @include mobile {
+            font-size: 40px;
+        }
+    }
+}

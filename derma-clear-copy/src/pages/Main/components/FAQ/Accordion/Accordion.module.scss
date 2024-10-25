@@ -1,0 +1,28 @@
+@import "@mixins";
+
+
+.title {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+    cursor: pointer;
+    border-bottom: 2px solid black;
+    font-size: 24px;
+    padding: 20px 0;
+
+    @include mobile {
+        font-size: 20px;
+
+    }
+}
+
+.content {
+    width: 90%;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.mark {
+    font-size: 48px;
+}

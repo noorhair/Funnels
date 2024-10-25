@@ -1,0 +1,26 @@
+@import "@mixins";
+@import "@sassVariables";
+
+.container {
+    margin: 0 auto;
+    background-color: #F2F8F2;
+    border-radius: 5px;
+    line-height: 1.5;
+    color: rgba(126, 60, 21, 1);
+    margin: 30px 0px 0px;
+    padding: 20px;
+    text-shadow: transparent 0px 0px 0px;
+    text-align: center;
+
+
+    .heading {
+        font-size: 26px;
+        padding-bottom: 20px;
+    }
+
+    .text {
+        .underscore {
+            text-decoration: underline;
+        }
+    }
+}

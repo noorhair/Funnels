@@ -1,0 +1,121 @@
+@import "@sassVariables";
+@import "@mixins";
+
+.container {
+
+    @include mobile {
+        margin-bottom: 25px;
+    }
+}
+
+.text {
+    display: block;
+    color: $adv-main-color;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+    margin-bottom: 22px;
+
+    @include mobile {
+        display: none;
+    }
+}
+
+.heading {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    color: #000000;
+
+    @include mobile {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
+.date {
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 31px;
+    padding: 0 7px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #000000;
+    margin: 15px 0 0 0;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+
+    @include mobile {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 25px;
+    }
+}
+
+.list {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    padding-inline-start: 0;
+}
+
+.listItem {
+    color: #FFFFFF;
+    background-color: #C0C0C0;
+    list-style: none;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.15em;
+    padding: 5px 14px;
+    margin-right: 13px;
+    margin-bottom: 5px;
+
+    &:nth-child(1) {
+        background-color: $adv-main-color;
+    }
+
+    @include mobile {
+        font-size: 12px;
+        line-height: 14px;
+        margin-right: 5px;
+    }
+}
+
+.socailShareContainer {
+    border-top: 1px solid #E3E3E3;
+    border-bottom: 1px solid #E3E3E3;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+
+    .socailShareText {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 0 !important;
+    }
+
+
+    .socailShareList {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+
+        @include mobile {
+            gap: 10px;
+        }
+
+        .socialShareItem {
+            width: 41px;
+            height: 41px;
+
+            @include mobile {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,45 @@
+@import "@sassVariables";
+@import "@mixins";
+
+.seenon {
+    position: relative;
+
+    &::before {
+        background: $main-bkgnd;
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 100%;
+        z-index: -5;
+    }
+
+    .header {
+        padding-top: 40px;
+    }
+
+    .list {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding-top: 20px;
+        padding-bottom: 60px;
+        gap: 15px;
+        padding-inline-start: 0;
+
+        @include mobile {
+            gap: 25px;
+        }
+
+        .listItem {
+            img {
+                max-width: 150px;
+            }
+        }
+    }
+}

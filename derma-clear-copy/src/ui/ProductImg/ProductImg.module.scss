@@ -1,0 +1,20 @@
+@import "@sassVariables";
+
+.images {
+    display: flex;
+    position: relative;
+
+    .productImg {
+        position: absolute;
+        left: 30%;
+        top: -1%;
+        width: 50%;
+    }
+
+    .productImg2 {
+        position: absolute;
+        right: 2%;
+        top: 10%;
+        width: 45%;
+    }
+}

@@ -1,0 +1,55 @@
+@import "@sassVariables";
+@import "@mixins";
+
+.customContainer {
+    max-width: 700px;
+}
+
+.header {
+    background-color: $usds-main-color;
+
+    .headerImg {
+        margin: 0 auto;
+        width: 210px;
+        padding: 15px;
+    }
+}
+
+.heading {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.completeImg {
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    width: 70px;
+}
+
+.textContainer {
+    font-size: 20px;
+    text-align: left;
+
+    .clientImg {
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    .text {
+        line-height: 1.5;
+        margin: 15px 0;
+        padding: 5px 10px;
+    }
+
+    .underlinedText {
+        text-decoration: underline;
+    }
+
+    .link {
+        text-decoration: underline;
+        cursor: pointer;
+        color: #007bff;
+    }
+}

@@ -1,0 +1,192 @@
+@import "@sassVariables";
+@import "@mixins";
+
+.topContent {
+    display: flex;
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+
+    .mobileContent {
+        display: none;
+
+        @include mobile {
+            display: block;
+        }
+
+        .moneybackContainer {
+            margin: 20px 0;
+            display: flex;
+            font-size: 13px;
+            line-height: 18px;
+
+            img {
+                width: 25%;
+            }
+        }
+
+        .timerContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid $main-color;
+
+            .timerHeader {
+                padding-top: 20px;
+                padding-bottom: 10px;
+                font-weight: 700;
+                font-size: 22px;
+
+                @include tablet {
+                    font-size: 18px;
+                    padding-top: 10px;
+                    padding-bottom: 5px;
+                    text-align: center;
+                }
+            }
+
+            .timerContent {
+                color: red;
+                font-weight: 700;
+                padding: 10px 0;
+
+                @include tablet {
+                    padding: 5px 0;
+                }
+            }
+
+            .timerText {
+                padding-top: 10px;
+                font-size: 18px;
+                padding-bottom: 20px;
+
+                @include tablet {
+                    font-size: 16px;
+                    text-align: center;
+                    padding-bottom: 10px;
+
+                }
+            }
+        }
+    }
+
+    .leftSection {
+        flex: 0 0 50%;
+        padding: 0 10px;
+        line-height: 27px;
+
+        @include mobile {
+            display: none;
+        }
+
+        .topHeader {
+            font-size: 22px;
+            color: #000;
+            font-weight: 400;
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 10px;
+        }
+
+        .textHeader {
+            text-align: center;
+            font-size: 24px;
+            color: #7f3d16;
+            padding-bottom: 20px;
+        }
+
+        .text {
+            font-size: 18px;
+            padding-bottom: 10px;
+        }
+
+        .moneybackContainer {
+            display: flex;
+            font-size: 12px;
+            align-items: center;
+            font-size: 16px;
+            line-height: 22px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            img {
+                width: 20%;
+                height: 20%;
+            }
+        }
+
+        .timerContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid $main-color;
+            border-radius: 10px;
+
+            .timerHeader {
+                padding-top: 20px;
+                padding-bottom: 10px;
+                font-weight: 700;
+                font-size: 22px;
+
+                @include tablet {
+                    font-size: 18px;
+                    padding-top: 10px;
+                    padding-bottom: 5px;
+
+                    text-align: center;
+                }
+            }
+
+            .timerContent {
+                color: red;
+                font-weight: 700;
+                padding: 10px 0;
+
+                @include tablet {
+                    padding: 5px 0;
+
+                }
+            }
+
+            .timerText {
+                padding-top: 10px;
+                font-size: 18px;
+                padding-bottom: 20px;
+
+                @include tablet {
+                    font-size: 16px;
+                    text-align: center;
+                    padding-bottom: 10px;
+
+                }
+            }
+        }
+    }
+
+    .rightSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mobile {
+            flex-direction: row;
+            width: 100vw;
+            background-color: #ffffff;
+            transform: translateX(-50%);
+            position: relative;
+            left: 50%;
+        }
+
+        img {
+            width: 80%;
+
+            @include mobile {
+                width: 50%;
+            }
+        }
+    }
+}

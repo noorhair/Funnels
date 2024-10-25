@@ -1,0 +1,36 @@
+@import "@mixins";
+@import "@sassVariables";
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    line-height: 1.5;
+    flex-direction: column;
+
+    .left {
+        .value {
+            text-decoration: line-through;
+            text-decoration-color: red;
+            text-decoration-thickness: 2px;
+        }
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .right {
+        color: $usds-price-color;
+
+        .title {
+            font-weight: 400;
+        }
+    }
+
+    .value {
+        font-size: 48px;
+        font-weight: 700;
+    }
+}

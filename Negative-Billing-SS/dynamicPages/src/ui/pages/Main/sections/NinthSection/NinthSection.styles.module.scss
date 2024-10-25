@@ -1,0 +1,81 @@
+@import "@sassConstants";
+@import "@mixins";
+
+.section_container {
+	@include flex(center, center, 103px, row);
+	width: 100%;
+	padding: 32px 42px 48px 42px;
+	font-family: $OpenSans;
+
+	@include tablet-small {
+		padding: 24px 16px;
+		> svg {
+			display: none;
+		}
+	}
+
+	.left_section {
+		@include flex(flex-start, flex-start, 11px, column);
+		@include tablet-small {
+			gap: 8px;
+			width: 100%;
+		}
+
+		.title {
+			@include font(40px, 700, $dark-gray, $OpenSans);
+			@include tablet-small {
+				font-size: 26px;
+			}
+		}
+		.subtitle {
+			@include font(26px, 400, $half-gray, $OpenSans);
+			@include tablet-small {
+				font-size: 18px;
+			}
+		}
+
+		.stars_container {
+			@include flex(center, center, 4px, row);
+
+			@include tablet-small {
+				display: none;
+			}
+
+			.star_container {
+				width: 50px;
+				height: 50px;
+				position: relative;
+				background-color: $light-green-box;
+				svg {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+			.half_star_container {
+				background: linear-gradient(to right, $light-green-box 50%, $gray 50%); 
+			}
+		}
+		> svg {
+			display: none;
+			@include tablet-small {
+				display: block;
+			}
+		}
+	}
+
+	.images_container {
+		@include flex(center, center, 16px, row);
+		padding: 8px 0px 0px 0px;
+
+		@include tablet-small {
+			svg {
+				width: 120px;
+			}
+			img {
+				width: 177px;
+			}
+		}
+	}
+}

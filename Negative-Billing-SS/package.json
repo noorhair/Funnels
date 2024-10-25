@@ -1,0 +1,13 @@
+{
+  "name": "negative-billing-ss",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "deploy": "npm run --prefix ./dynamicPages build && npm run --prefix ./dynamicCheckoutPage build && node ftp.js"
+  },
+  "dependencies": {
+    "basic-ftp": "5.0.5",
+    "dotenv": "16.4.5"
+  }
+}

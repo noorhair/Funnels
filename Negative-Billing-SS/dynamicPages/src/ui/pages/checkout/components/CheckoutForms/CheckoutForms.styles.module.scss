@@ -1,0 +1,219 @@
+@import "../../../../../styles//mixins.scss";
+
+.deletme {
+	width: 100%;
+	color: red;
+	padding: 20px;
+	margin: 10px 0px;
+	text-align: center;
+	font-size: 15px;
+	border: 1px dotted red;
+}
+
+.title {
+	color: black;
+}
+
+.contact_form {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-row-gap: 5px;
+	grid-column-gap: 10px;
+
+	> div:first-child {
+		grid-column: span 6;
+	}
+	> div:last-child {
+		grid-column: span 6;
+	}
+}
+
+.form_container {
+	@include flex(flex-start, center, 20px, column);
+	width: 100%;
+	margin: 0px 0px 20px 0px;
+
+	> h1 {
+		width: 100%;
+	}
+	> p {
+		width: 100%;
+		font-size: 14px;
+		text-align: left;
+	}
+
+	.contact_form {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-row-gap: 5px;
+		grid-column-gap: 10px;
+
+		> div:first-child {
+			grid-column: span 6;
+		}
+		> div:last-child {
+			grid-column: span 6;
+		}
+	}
+	.delivery_form {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-row-gap: 5px;
+		grid-column-gap: 10px;
+
+		> div:first-child {
+			grid-column: span 6;
+		}
+		> div:nth-child(n + 2) {
+			grid-column: span 3;
+		}
+		> div:nth-child(n + 4) {
+			grid-column: span 6;
+		}
+		> div:nth-child(n + 6) {
+			grid-column: span 2;
+		}
+		> div:nth-child(9) {
+			grid-column: span 6;
+		}
+		> div:nth-child(10) {
+			grid-column: span 6;
+		}
+	}
+
+	.payments_types_container {
+		width: 100%;
+
+		.payments_custom_form {
+			@include flex(space-between, center, 0px, column);
+			width: 100%;
+
+			.head_circled {
+				border-top-right-radius: 5px;
+				border-top-left-radius: 5px;
+			}
+			.head_border_blue {
+				border: 1px solid #1673b0;
+				background-color: #f0f5ff;
+			}
+			.head_border_gray {
+				border: 1px solid #dedede;
+				background-color: #fff;
+			}
+			.head {
+				@include flex(space-between, center, 0px, row);
+				width: 100%;
+				padding: 15px;
+
+				.radio_button_container {
+					@include flex(space-between, center, 10px, row);
+					font-size: 15px;
+					color: black;
+				}
+
+				.adquirientes_container {
+					@include flex(space-between, center, 10px, row);
+				}
+				.paypal_svg {
+					width: 85px;
+				}
+			}
+
+			.payment_form {
+				@include flex(space-between, center, 10px, column);
+				padding: 15px;
+				width: 100%;
+				background-color: #f4f4f4;
+				border: 1px solid #dedede;
+				border-top: none;
+				.cards_data_container {
+					width: 100%;
+					display: grid;
+					grid-template-columns: repeat(6, 1fr);
+					grid-row-gap: 5px;
+					grid-column-gap: 20px;
+
+					> div:first-child {
+						grid-column: span 6;
+					}
+					> div:nth-child(n + 2) {
+						grid-column: span 3;
+					}
+					> div:nth-child(4) {
+						grid-column: span 6;
+					}
+					> div:last-child {
+						grid-column: span 6;
+					}
+				}
+			}
+
+			.paypal_text {
+				@include flex(space-between, center, 10px, column);
+				padding: 35px 45px;
+				width: 100%;
+				background-color: #f4f4f4;
+				border: 1px solid #dedede;
+				border-top: none;
+				border-bottom-right-radius: 5px;
+				border-bottom-left-radius: 5px;
+				font-size: 14px;
+				text-align: center;
+				color: #000;
+			}
+		}
+	}
+}
+
+.final_paragraph {
+	font-size: 14px;
+	color: #000;
+
+	a {
+		color: #000;
+	}
+}
+.submit_button {
+	width: 100%;
+	background-color: #1d8060;
+	padding: 15px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+	border-radius: 5px;
+	text-transform: capitalize;
+}
+.submit_button:hover {
+	background-color: #19644b;
+}
+
+.last_section {
+	@include flex(space-between, center, 15px, column);
+	width: 100%;
+	font-size: 15px;
+	margin-top: 35px;
+	padding-top: 34px;
+
+	border-top: 1px solid #dcdcdc;
+	> span {
+		color: #535353;
+		font-size: 14px;
+
+		a {
+			color: #0000ee;
+			text-decoration: none;
+		}
+	}
+
+	.link_container {
+		@include flex(space-around, center, 10px, row);
+		width: 100%;
+		a {
+			color: #1878b9;
+			text-decoration: none;
+		}
+	}
+}

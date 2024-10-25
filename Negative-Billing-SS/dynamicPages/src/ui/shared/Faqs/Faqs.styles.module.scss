@@ -1,0 +1,96 @@
+@import "@sassConstants";
+@import "@mixins";
+
+.faqs_container {
+    @include flex(center, flex-start, 80px, row);
+    width: 100%;
+    padding: 48px 80px 56px 80px;
+    font-family: $OpenSans;
+
+    @include tablet-small {
+        padding: 24px 16px;
+        flex-direction: column;
+        gap: calc(32px + 24px);
+    }
+
+    h1 {
+        @include font(48px, 700, $dark-green, $OpenSans);
+
+        @include tablet-small {
+            font-size: 28px;
+            text-align: center;
+        }
+    }
+
+    .right_section,
+    .left_section {
+        @include flex(center, flex-start, 32px, column);
+        width: 50%;
+
+        @include tablet-small {
+            width: 100%;
+        }
+
+        @include tablet-small {
+            gap: 16px;
+        }
+    }
+
+    .right_section {
+        .faqs {
+            @include flex(center, flex-start, 10px, column);
+            width: calc(100%);
+
+            .faq_container {
+                @include flex(space-between, flex-start, 10px, row);
+                @include font(18px, 400, $dark-green, $OpenSans);
+                width: 100%;
+                padding: 16px;
+                border-bottom: 1px solid $light-green;
+
+                p {
+                    width: calc(100% - 32px);
+                }
+            }
+        }
+    }
+
+    .left_section {
+        @include font(16px, 400, $dark-green, $OpenSans);
+        width: 100%;
+
+        .paragraphs,
+        .paragraphsMobile {
+            @include flex(center, flex-start, 15px, column);
+            word-wrap: break-word;
+            width: 100%;
+
+            p:first-child {
+                @include font(18px, 400, $dark-green, $OpenSans);
+                padding: 16px 0px;
+                border-bottom: 1px solid $light-green;
+                width: 100%;
+            }
+
+            p {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+        }
+
+        .paragraphs {
+            @include tablet-small {
+                display: none;
+            }
+        }
+
+        .paragraphsMobile {
+            display: none;
+
+            @include tablet-small {
+                display: block;
+            }
+        }
+    }
+}

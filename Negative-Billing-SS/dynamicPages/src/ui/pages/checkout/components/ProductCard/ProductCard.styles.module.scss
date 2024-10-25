@@ -1,0 +1,146 @@
+@import "../../../../../styles/mixins.scss";
+
+
+.product_responsive_super_container {
+    @include flex(space-between, center, 20px, column);
+    width: calc(100%);
+
+
+    .product_responsive_container {
+        @include flex(space-between, center, 20px, row);
+        width: calc(100% + 40px);
+        background-color: #fafafa;
+        height: 52px;
+        padding: 5px 25px;
+    
+        span {
+            @include flex(center, center, 5px, row);
+            font-size: 14px;
+            color: #000;
+            .rotated {
+                transform: rotate(180deg);
+            }
+        }
+        p {
+            font-size: 18px;
+            color: #333333;
+        }
+    }
+}
+
+.product_container {
+    @include flex(space-between, flex-start, 20px, column);
+    width: 100%;
+
+    .product_section {
+        @include flex(space-between, center, 15px, row);
+        width: 100%;
+
+        .image {
+            position: relative;
+            .quantity {
+                @include flex(center, center, 0px, row);
+                position: absolute;
+                top: -8px;
+                right: -8px;
+                background-color: #666666;
+                color: white;
+                border-radius: 100%;
+                height: 22px;
+                width: 22px;
+                font-weight: bold;
+                font-size: 12px;
+            }
+            img {
+                border: 1px solid #d6d6d6;
+                border-radius: 5px;
+                width: 64px;
+                height: 64px;
+            }
+        }
+
+        .description {
+            @include flex(flex-start, flex-start, 3px, column);
+
+            .product_name {
+                font-size: 14px;
+                font-weight: 500;
+            }
+            .description { 
+                font-size: 12px;
+                font-weight: 300;
+            }
+        }
+
+        .price {
+            font-size: 14px;
+
+        }
+
+    }
+
+    .totals_section {
+        @include flex(space-between, flex-start, 12px, column);
+        width: 100%;
+
+        .separated_text {
+            @include flex(space-between, flex-start, 0px, row);
+            width: 100%;
+        }
+
+        .subtotal {
+            font-size: 14px;
+            > p:first-child {
+                font-weight: 400;
+            }
+            > p:last-child {
+                font-weight: 700;
+            }
+        }
+
+        .shipping {
+            font-size: 14px;
+            > p:first-child {
+                font-weight: 400;
+            }
+            > p:last-child {
+                font-weight: 400;
+                color: #666666;
+                font-size: 13px;
+            }
+        }
+
+        .total {
+            @include flex(space-between, center, 5px, row);
+
+            > p:first-child {
+                font-weight: 600;
+                font-size: 23px;
+                color: #000;
+            }
+            > p:last-child {
+                @include flex(center, center, 5px, row);
+                font-weight: 400;
+                color: #666666;
+                font-size: 15px;
+                > label {
+                    color: #000;
+                    font-size: 23px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .recurring_total {
+            width: 100%;
+            border-top: 1px solid #d6d6d6;
+            padding-top: 20px;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+
+        }
+    }
+    
+}
+

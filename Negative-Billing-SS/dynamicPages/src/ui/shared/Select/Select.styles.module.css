@@ -1,0 +1,82 @@
+.field_with_error .error_text {
+  opacity: 1 !important;
+}
+
+.field_with_error .div_select {
+  -webkit-box-shadow: 0 0 0 1px red !important;
+          box-shadow: 0 0 0 1px red !important;
+  border-color: red !important;
+}
+
+.select_container {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.select_container .top_text {
+  font-size: 12px;
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 1;
+  text-transform: capitalize;
+}
+
+.select_container .div_select {
+  width: 100%;
+  border: 1px solid #dedede;
+  border-radius: 6px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.select_container .div_select:focus-within {
+  -webkit-box-shadow: 0 0 0 1px #1b73b0;
+          box-shadow: 0 0 0 1px #1b73b0;
+  border-color: #1b73b0;
+}
+
+.select_container .div_select select {
+  width: 100%;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding: 24px 30px 6px 12px;
+  color: #000;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.select_container .div_select svg {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 45%;
+  right: 20px;
+  -webkit-transform: translateY(-60%);
+      -ms-transform: translateY(-60%);
+          transform: translateY(-60%);
+}
+
+.select_container .error_text {
+  font-size: 14px;
+  color: red;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}

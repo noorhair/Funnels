@@ -1,0 +1,66 @@
+@import "@sassConstants";
+@import "@mixins";
+
+.thank_root{
+    @include flex(flex-start, center, 0px, column);
+    width: 100%;
+    padding-bottom: 48px;
+    font-family: $Roboto;
+
+    .logo_container{
+        @include flex(center, center, 0px, column);
+        width: 100%;
+        padding: 15px;
+        background-color: #f4f2ed;
+        img {
+            width: 200px;
+            height: auto;
+        }
+    }
+
+    .content {
+        @include flex(flex-start, flex-start, 30px, column);
+        width: 100%;
+        padding: 0 10px;
+        max-width: 850px;
+        @include tablet {
+            padding: 24px;
+        }
+        .checked_container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 50px;
+    
+            img { width: 64px; }
+    
+            p {
+                @include font(32px, bold, $black-color, $Roboto);
+                text-align: center;
+                margin-top: 20px;
+                padding: 0px 29px;
+            }
+        } 
+
+        .paragraphs {
+            @include flex(flex-start, flex-start, 30px, column);
+            @include font(20px, 400, $black-color, $Roboto);
+            width: 100%;
+            a { color: #007bf0; }
+        }
+
+        .images_container{
+            @include flex(flex-start, flex-start, 10px, column);
+            width: 100%;
+            img {
+                width: 100%;
+                border-radius: 8px;
+            }
+        }
+    }
+
+}
+
+
+

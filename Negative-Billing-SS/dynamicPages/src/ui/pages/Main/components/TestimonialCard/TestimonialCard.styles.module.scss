@@ -1,0 +1,84 @@
+@import "@sassConstants";
+@import "@mixins";
+
+
+
+.testimonial_card_container {
+    @include flex(center, center, 16px, column);
+    width: 100%;
+    max-width: 400px;
+    padding: 16px;
+    border-radius: 8px;
+    background: $beige-bg-color;
+    font-size: $OpenSans;
+
+    img {
+        width: 100%;
+    }
+
+    .content {
+        @include flex(flex-start, flex-start, 12px, column);
+        color: $black-color;
+        width: 100%;
+
+        .name_container {
+            @include flex(flex-start, flex-start, 4px, column);
+            width: 100%;
+    
+            .name {
+                width: 100%;
+                text-align: left;
+                color: $black-color;
+                font-size: 18px;
+                font-weight: 400;
+            }
+    
+            .verified_buyer_container {
+                @include flex(flex-start, center, 4px, row);
+                width: 100%;
+    
+                .icon_container {
+                    @include flex(center, center, 0px, row);
+                    position: relative;
+    
+                    > svg:last-child {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-55%, -45%);
+                    }
+                }
+                .text {
+                    color: $light-green;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+    
+        }
+
+        .title {
+            @include font(20px, 700);
+        }
+
+        .stars_container {
+            @include flex(space-between, center, 12px, row);
+            width: 100%;
+
+            .stars_content {
+                @include flex(space-between, center, 2px, row);
+            }
+            .date {
+                @include font(14px, 300);
+            }
+        }
+
+        .last_paragraph {
+            @include font(16px, 400);
+        }
+
+    }
+    
+
+
+}

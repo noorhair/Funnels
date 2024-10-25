@@ -1,0 +1,79 @@
+@import "@sassConstants";
+@import "@mixins";
+
+.section_container {
+  @include flex(flex-start, center, 24px, column);
+  width: 100%;
+  padding: 48px 80px 56px 80px;
+  font-family: $OpenSans;
+
+  @include tablet-small {
+    padding: 24px 16px;
+  }
+
+  .title {
+    @include font(36px, 700, $dark-green, $OpenSans);
+    text-align: center;
+    text-transform: capitalize;
+
+    @include tablet-small {
+      font-size: 24px;
+    }
+  }
+
+  .barra_container {
+    width: 100%;
+    background-color: $beige;
+    height: 26px;
+    position: relative;
+
+    @include tablet-small {
+      height: 19px;
+      width: calc(100% + 32px);
+    }
+    .pepita {
+      @include font(20px, 350, #fdfcfb, $Gotham);
+      background-color: $brown;
+      padding: 8px 12px 6px 12px;
+      border-radius: 12px;
+      height: 40px;
+      width: 133px;
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-transform: uppercase;
+
+      @include tablet-small {
+        font-size: 18px;
+        height: 31px;
+        width: 113px;
+        padding: 8px 12px;
+      }
+    }
+  }
+
+  .paragprah {
+    @include font(18px, 400, $black-color, $OpenSans);
+    text-align: left;
+    width: 100%;
+    padding: 0 80px;
+    @include tablet-small {
+      padding: 0 0px;
+    }
+  }
+
+  .image_container {
+    @include flex(flex-start, center, 24px, column);
+    padding: 24px 80px;
+    width: 100%;
+    @include tablet-small {
+      padding: 24px 16px;
+    }
+    img {
+      max-width: 436px;
+      width: 100%;
+    }
+  }
+}

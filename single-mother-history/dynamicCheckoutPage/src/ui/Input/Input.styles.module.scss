@@ -1,0 +1,63 @@
+@import "@mixins";
+
+.input_container {
+    @include flex(flex-start, flex-start, 2px, column);
+    width: 100%;
+    position: relative;
+}
+
+.field_with_error .error_text{ 
+    opacity: 1 !important;
+}
+.field_with_error .div_input {
+    box-shadow: 0 0 0 1px red !important;
+    border-color: red !important;
+}
+
+.input_with_value .top_text {
+    opacity: 1 !important;
+}
+.input_with_value .div_input input {
+    padding: 24px 12px 6px 12px !important;
+}
+
+
+.input_container .top_text {
+    font-size: 12px;
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    text-transform: capitalize;
+}
+
+.input_container .div_input {
+    width: 100%;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+.input_container .div_input:focus-within {
+    box-shadow: 0 0 0 1px #1b73b0;
+    border-color: #1b73b0;
+}
+.input_container .div_input input {
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 12px;
+    color: #000;
+    transition: all 0.3s ease;
+}
+.input_container .error_text {
+    font-size: 13px;
+    color: red;
+    opacity: 0;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0px !important;
+}

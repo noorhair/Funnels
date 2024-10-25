@@ -1,0 +1,109 @@
+@import "@sassConstants";
+@import "@mixins";
+
+.section_container {
+  @include flex(flex-start, center, 24px, column);
+  width: 100%;
+  padding: 56px 80px;
+  font-family: $OpenSans;
+
+  @include tablet-small {
+    padding: 24px 16px;
+  }
+
+  .doctor_container {
+    @include flex(flex-start, center, 32px, row);
+    width: 100%;
+
+    @include tablet-small {
+      gap: 16px;
+    }
+
+    img {
+      width: 120px;
+      height: 120px;
+
+      @include tablet-small {
+        width: 64px;
+        height: 64px;
+      }
+    }
+
+    .doctor_texts_container {
+      @include flex(flex-start, center, 0px, column);
+      width: 100%;
+      text-transform: uppercase;
+
+      .doctor_name {
+        width: 100%;
+        color: $brown;
+        font-size: 20px;
+        font-weight: 500;
+
+        @include tablet-small {
+          font-size: 18px;
+        }
+      }
+      .doctor_text {
+        width: 100%;
+        font-size: 22px;
+        font-style: italic;
+        font-weight: 400;
+        color: $black-color;
+
+        @include tablet-small {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .paragraphs_container {
+    @include flex(flex-start, center, 24px, column);
+    width: 100%;
+    margin-top: 24px;
+    @include tablet-small {
+      margin-top: 0px;
+    }
+    p {
+      width: 100%;
+      text-align: left;
+      color: $black-color;
+      font-size: 18px;
+      font-weight: 400;
+    }
+    .paragraph_with_image {
+      @include flex(flex-start, center, 10px, row);
+    }
+  }
+
+  .section_title {
+    @include font(32px, 700, $dark-green, $OpenSans);
+    text-align: center;
+    padding: 24px 0px 0px 0px;
+    @include tablet-small {
+      font-size: 22px;
+      padding: 0px;
+    }
+  }
+
+  .section_title_2 {
+    @include font(36px, 700, $black-color, $OpenSans);
+    text-align: center;
+    padding: 24px 0px 0px 0px;
+    @include tablet-small {
+      font-size: 24px;
+      padding: 0px;
+      margin: 24px 0px 20px 0px;
+    }
+  }
+
+  .testimonal_card_container {
+    @include flex(center, flex-start, 24px, row, wrap);
+    width: 100%;
+    padding: 24px 0px 0px 0px;
+    @include tablet-small {
+      padding: 0px;
+    }
+  }
+}

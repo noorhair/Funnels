@@ -1,0 +1,13 @@
+export { default as Usa } from "./Usa";
+export { default as Noor } from "./Noor";
+export { default as Star } from "./Star";
+export { default as VerifiedBuyer } from "./VerifiedBuyer";
+export { default as Done } from "./Done";
+export { default as Gps } from "./Gps";
+export { default as PayPal } from "./Paypal";
+export { default as Visa } from "./Visa";
+export { default as MasterCard } from "./MasterCard";
+export { default as AmericanExpress } from "./AmericanExpress";
+export { default as Discover } from "./Discover";
+export { default as Cross } from "./Cross";
+export { default as Minus } from "./Minus";

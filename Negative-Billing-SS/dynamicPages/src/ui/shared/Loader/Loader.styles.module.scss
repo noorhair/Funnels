@@ -1,0 +1,59 @@
+
+@import "../../../styles//mixins.scss";
+
+.container {
+    @include flex(center, center, 8px, column);
+    position: fixed;
+    z-index: 60;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100vh;
+    overflow: auto;
+    backdrop-filter: blur(2px);
+    background-color: rgba($color: #000000, $alpha: 0.1);
+
+    svg {
+        width: 70px;
+        transform-origin: center;
+        animation: rotate4 2s linear infinite;
+    }
+       
+    circle {
+        fill: none;
+        stroke: #000;
+        strokeWidth: 2;
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+        stroke-linecap: round;
+        animation: dash4 1.5s ease-in-out infinite;
+    }
+
+    span {
+        color: #000;
+        font-size: 15px;
+    }
+       
+    @keyframes rotate4 {
+        100% {
+         transform: rotate(360deg);
+        }
+    }
+       
+    @keyframes dash4 {
+        0% {
+         stroke-dasharray: 1, 200;
+         stroke-dashoffset: 0;
+        }
+       
+        50% {
+         stroke-dasharray: 90, 200;
+         stroke-dashoffset: -35px;
+        }
+       
+        100% {
+         stroke-dashoffset: -125px;
+        }
+    }
+
+}

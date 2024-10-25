@@ -1,0 +1,111 @@
+@import "@sassConstants";
+@import "@mixins";
+
+.section_container {
+    @include flex(flex-start, center, 24px, column);
+    width: 100%;
+    padding: 48px 80px;
+    font-family: $Gotham;
+
+    @include tablet-small {
+        padding: 32px 16px;
+    }
+
+    .content {
+        @include flex(flex-start, flex-start, 64px, row);
+        width: 100%;
+
+        @include tablet-small {
+            flex-direction: column;
+            gap: 20px;
+        }
+      
+        .left_section {
+            @include font(14px, 400, $gray-51);
+            @include flex(flex-start, flex-start, 0px, column);
+            width: 40%;
+
+            @include tablet-small {
+                width: 100%;
+            }
+            > svg {
+                margin-bottom: 32px;
+                width: 235.74px;
+                height: 62px;
+            }
+
+            p {
+                @include tablet-small {
+                    width: 100%;
+                }
+            }
+
+        }
+    
+        .right_section {
+            @include flex(flex-start, center, 16px, column);
+            width: 60%;
+
+            @include tablet-small {
+                width: 100%;
+            }
+            .top_section {
+                @include flex(flex-start, flex-start, 24px, row);
+                width: 100%;
+
+                @include tablet-small {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                .left, .right {
+                    width: 50%;
+                    @include tablet-small {
+                        width: 100%;
+                    }
+                }
+                .left {
+                    @include tablet-small {
+                        @include flex(center, center, 6px, row, wrap);
+                    }
+                    p {
+                        @include font(15px, 700, $dark-green);
+                        margin-bottom: 12px;
+                        @include tablet-small {
+                            margin-bottom: 0px;
+                            border-right: 1px solid black;
+                            padding-right: 8px;
+                        }
+                    }
+
+                    a {
+                        text-decoration: none
+                    }
+                }
+
+                .right {
+                    .card {
+                        @include font(14px, 400, $gray-51);
+                        width: 100%;
+                        padding: 12px 8px;
+                        border-radius: 8px;
+                        border: 0.5px solid $dark-green;
+                        margin-bottom: 12px;
+                        letter-spacing: -0.07px;
+                    }
+                    p {
+                        @include font(14px, 400, $gray-51);
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+
+            .texts {
+                @include font(12px, 400, $gray-51, $Gotham);
+                p {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}

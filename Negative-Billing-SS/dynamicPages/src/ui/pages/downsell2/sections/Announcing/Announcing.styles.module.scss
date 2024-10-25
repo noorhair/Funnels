@@ -1,0 +1,254 @@
+@import "@sassConstants";
+@import "@mixins";
+
+.announcing_container {
+    @include flex(center, center, 48px, row);
+    width: 100%;
+
+    .content {
+        @include flex(center, center, 10px, column);
+        width: 100%;
+        max-width: 820px;
+        text-align: center;
+        margin-top: 25px;
+        padding: 0px 15px;
+        margin-bottom: 50px;
+
+        .title {
+            font-size: 48px;
+            line-height: 1.3em;
+            font-family: $System;
+            @include tablet-small {
+                font-size: 30px;
+            }
+        }
+        .subtitle {
+            font-size: 24px;
+            font-weight: normal;
+            font-family: $System;
+
+        }
+
+        .card_container {
+            @include flex(center, center, 10px, column);
+            width: 100%;
+            background-color: #f4f2ed;
+            border: 2px solid #525A31;
+            padding: 24px 10px;
+            font-size: 22px;
+            text-align: justify;
+            margin-top: 10px;
+            font-family: $System;
+
+
+            @include tablet-small {
+                font-size: 18px;
+            }
+
+            .texto {
+                font-size: 32px;
+                text-align: center;
+                line-height: 1.4em;
+                @include tablet-small {
+                    font-size: 18px;
+                    text-align: left;
+                    padding-left: 15px;
+                }
+                .green {
+                    font-size: 30px;
+                    color: #38761d;
+                    @include tablet-small {
+                        font-size: 18px;
+                        text-align: left;
+                    }
+                }
+            }
+
+            .before {
+                width: 100%;
+                font-size: 22px;
+                line-height: 1.4em;
+                text-align: center;
+                font-weight: 700;
+                @include tablet-small {
+                    font-size: 18px;
+                    text-align: left;
+                    padding-left: 15px;
+                }
+            }
+            .our_price {
+                width: 100%;
+                font-size: 24px;
+                line-height: 1.4em;
+                text-align: center;
+                font-weight: 700;
+                color: red;
+                @include tablet-small {
+                    font-size: 18px;
+                    text-align: left;
+                    padding-left: 15px;
+                }
+            }
+
+            .product_img {
+                padding-top: 20px;
+                width: 100%;
+                max-width: 300px;
+
+                @include tablet-small {
+                    max-width: 270px;
+                }
+                @include mobile-small {
+                    max-width: 100%;
+                }
+
+            }
+
+            .prices {
+                @include flex(center, flex-start, 100px);
+                font-size: 24px;
+                font-weight: 700;
+                margin-top: 10px;
+                text-align: center;
+                margin-bottom: 20px;
+                @include tablet-small {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+                    font-size: 23px;
+                    text-align: center;
+                }
+
+                .value {
+                    font-size: 48px;
+                    @include tablet-small {
+                        font-size: 40px;
+                    }
+                }
+                .label {
+                    font-size: 17px;
+                    color: rgb(99, 106, 123);
+                }
+                .good_price {
+                    color: rgba(42, 187, 77, 1);
+                }
+            }
+
+            .button {
+                padding: 20px 15px;
+                background-color: rgba(42, 187, 77, 1);
+                font-weight: 700;
+                color: white;
+                width: 100%;
+                max-width: 750px;
+                border-radius: 10px;
+                font-size: 19px;
+                cursor: pointer;
+            }
+    
+            .link {
+                font-size: 20px;
+                color: darkblue;
+                font-weight: 700;
+                cursor: pointer;
+                text-decoration: underline;
+                margin-top: 15px;
+            }
+    
+            .adquirientes {
+                max-width: 280px;
+                width: 100%;
+            }
+    
+            .guaranty {
+                max-width: 150px;
+                width: 100%;
+            }
+    
+        }
+
+
+        .benefits {
+            width: 100%;
+            margin: 20px 0px;
+            p:first-child {
+                font-size: 22px;
+                text-align: left;
+                font-weight: 700;
+                font-family: $System;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 20px;
+                text-align: left;
+                font-family: $System;
+            }
+        }
+
+        .button_with_element {
+            @include flex(center, center, 10px, column);
+            width: 100%;
+            .image_icon {
+                @include flex(flex-start, center, 10px);
+                font-size: 18px;
+                img {
+                    max-width: 25px;
+                }
+            }
+            .button {
+                padding: 20px 15px;
+                background-color: rgba(42, 187, 77, 1);
+                font-weight: 700;
+                color: white;
+                width: 100%;
+                max-width: 750px;
+                border-radius: 10px;
+                font-size: 19px;
+                cursor: pointer;
+            }
+        }
+
+        .no_button {
+            padding: 15px 15px;
+            background-color: #7f3d16;
+            font-weight: 700;
+            color: white;
+            width: 100%;
+            max-width: 290px;
+            border-radius: 10px;
+            font-size: 22px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .last_text {
+            font-size: 20px;
+            font-family: $System;
+            text-align: justify;
+            margin: 20px 0px;
+            cursor: pointer;
+        }
+
+        .last_image {
+            @include flex(center, center, 30px, column);
+            h2 {
+                font-size: 30px;
+                font-weight: 700;
+                font-family: $System;
+
+                @include tablet-small {
+                    font-size: 21px;
+                }
+            }
+            img {
+                width: 100%;
+                max-width: 600px;
+            }
+        }
+
+       
+
+
+    }
+}

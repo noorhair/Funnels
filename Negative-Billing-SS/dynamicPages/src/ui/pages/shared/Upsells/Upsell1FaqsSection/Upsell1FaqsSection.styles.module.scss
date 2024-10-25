@@ -1,0 +1,19 @@
+@import "@sassConstants";
+@import "@mixins";
+
+.faqs_section_container {
+    @include flex(center, center, 48px, row);
+    width: 100%;
+    padding: 0px;
+
+    .faqs_section_contenr {
+        width: 100%;
+        max-width: 1440px;
+    
+        
+        .link {
+            color: #1181ff;
+        }
+    }
+
+}

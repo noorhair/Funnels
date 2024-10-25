@@ -1,0 +1,313 @@
+@import "@sassConstants";
+@import "@mixins";
+
+.section_container {
+	@include flex(center, center, 24px, column);
+	width: 100%;
+	padding: 56px 80px;
+	font-family: $OpenSans;
+
+	@include tablet-small {
+		padding: 24px 16px;
+	}
+
+	.content_trial {
+		@include flex(center, center, 0px, row);
+
+		background-color: $white-color;
+		padding: 32px;
+		width: 100%;
+		max-width: 1040px;
+		border-radius: 0px 0px 16px 16px;
+
+		@include tablet-small {
+			padding: 16px;
+		}
+
+		.section_left {
+			@include flex(center, center, 24px, column);
+			flex: 1 0 40%;
+
+			.image {
+				@include flex(center, center, 0px, column);
+				display: flex;
+
+				img {
+					display: block;
+					margin: 0 auto;
+					width: 90%;
+					height: 90%;
+				}
+			}
+
+			.reviews {
+				width: 70%;
+
+				.rating_img {
+					display: block;
+					margin: 0 auto;
+					height: 95%;
+					border: 1px solid black;
+					padding: 10px 20px;
+					width: 100%;
+				}
+			}
+
+			@include laptop-small {
+				display: none;
+			}
+
+			.massager {
+				@include flex(space-around, center, 0px, row);
+				width: 100%;
+				margin: 10px auto;
+				font-weight: 700;
+				background-color: $gray;
+				border-radius: 5px;
+				font-size: 10px;
+				text-align: center;
+
+				@include tablet-small {
+					display: none;
+				}
+			}
+
+			.massager_image img {
+				width: 40px;
+				padding: 5px;
+
+				@include tablet {
+					width: 40px;
+				}
+			}
+
+			.massager_info_discount {
+				text-decoration: line-through;
+				color: grey;
+				font-weight: 400;
+				margin-right: 5px;
+			}
+
+			.massager_info {
+				@include flex(center, center, 5px, column);
+				padding: 10px 0px;
+
+				span {
+					color: $red;
+				}
+
+				p:last-child {
+					font-size: 12px;
+				}
+			}
+		}
+
+		.section_right {
+			@include flex(center, center, 18px, column);
+			padding: 20px 0;
+			background-color: $beige-bg-color;
+			border: 3px dashed $brown;
+			border-radius: 2%;
+			flex: 1 0 60%;
+
+			.title {
+				@include font(24px, 800, blue, $OpenSans);
+				max-width: 500px;
+				width: 100%;
+				text-align: center;
+				padding: 0 10px;
+
+				@include tablet-small {
+					font-size: 20px;
+				}
+
+				text-align: center;
+				color: $dark-green;
+
+				span {
+					text-decoration: underline;
+				}
+			}
+
+			.mobile_img {
+				display: none;
+
+				@include laptop-small {
+					display: block;
+				}
+
+				.image {
+					@include flex(center, center, 0px, column);
+					display: flex;
+
+					img {
+						display: block;
+						margin: 0 auto;
+						width: 90%;
+						height: 90%;
+					}
+				}
+
+				.reviews {
+					width: 70%;
+					display: block;
+					margin: 0 auto;
+
+					.rating_img {
+						display: block;
+						margin: 0 auto;
+						width: 90%;
+						height: 90%;
+
+						@include laptop-small {
+							padding: 5px 25px;
+						}
+
+						@include laptop-small {
+							padding: 5px 10px;
+						}
+					}
+
+					@include laptop-small {
+						border: 1px solid black;
+						padding: 10px 20px;
+						width: 85%;
+					}
+				}
+			}
+
+			.massager {
+				@include flex(space-around, center, 0px, row);
+				width: 85%;
+				margin: 10px auto;
+				font-weight: 700;
+				background-color: $gray;
+				border-radius: 5px;
+				font-size: 14px;
+				text-align: center;
+
+				@include tablet {
+					font-size: 11px;
+					padding: 5px 0;
+				}
+
+				@include mobile-average {
+					font-size: 10px;
+				}
+
+				@include mobile-medium {
+					font-size: 9px;
+				}
+			}
+
+			.massager_image img {
+				width: 70px;
+				padding: 5px;
+
+				@include tablet {
+					width: 50px;
+				}
+
+				@include mobile-medium {
+					width: 40px;
+				}
+			}
+
+			.massager_info_discount {
+				text-decoration: line-through;
+				color: grey;
+				font-weight: 400;
+				margin-right: 5px;
+			}
+
+			.massager_info {
+				@include flex(center, center, 5px, column);
+
+				span {
+					color: $red;
+				}
+
+				p:last-child {
+					font-size: 16px;
+
+					@include tablet {
+						font-size: 12px;
+					}
+				}
+			}
+
+			.button {
+				@include font(22px, 700, $white-color, $OpenSans);
+				border-radius: 12px;
+				background: #2abb4d;
+				padding: 16px 24px;
+				width: 95%;
+				max-width: 800px;
+				text-align: center;
+				text-transform: uppercase;
+				cursor: pointer;
+
+				@include tablet-small {
+					padding: 16px 12px;
+					font-size: 20px;
+				}
+			}
+
+			.pricing_section {
+				@include flex(center, flex-start, 30px, row);
+
+				.prices {
+					@include flex(flex-start, center, 0px, column);
+					@include font(28px, 700, $black-color, $OpenSans);
+
+					@include tablet-small {
+						font-size: 22px;
+						padding-top: 8px;
+
+						>p:nth-child(2) {
+							font-size: 34px;
+						}
+					}
+
+					span {
+						@include font(17px, 600, rgba(82, 90, 49, 0.7), $OpenSans);
+
+						@include tablet-small {
+							font-size: 15px;
+						}
+					}
+				}
+
+				.prices:last-child {
+					color: $green-darkito;
+				}
+
+				@include tablet-small {
+					flex-direction: column;
+					align-items: center;
+					gap: 16px;
+				}
+			}
+
+			.text {
+				width: 95%;
+				@include font(16px, 400, $black-color, $OpenSans);
+				text-align: center;
+			}
+
+			.small_text {
+				width: 95%;
+				@include font(12px, 400, grey, $OpenSans);
+				text-align: center;
+			}
+
+			.moneyback_img {
+				width: 50%;
+
+				@include tablet-small {
+					width: 60%;
+				}
+			}
+		}
+	}
+}

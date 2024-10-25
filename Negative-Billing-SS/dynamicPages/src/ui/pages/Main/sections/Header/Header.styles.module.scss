@@ -1,0 +1,43 @@
+@import "@sassConstants";
+@import "@mixins";
+
+.header_container {
+    font-family: $OpenSans;
+
+    .top_section {
+        @include font(16px, 700, $white-color, $OpenSans);
+        width: 100%;
+        padding: 8px;
+        background-color: $dark-green;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include tablet-small {
+            @include font(11px, 700, $white-color, $OpenSans);
+        }
+    }
+
+    .bottom_section {
+        @include flex(center, center, 48px, row);
+        padding: 16px 80px;
+
+        @include tablet-small {
+            padding: 4px 16px;
+            gap: 20px;
+            height: 60px;
+
+            svg {
+                transform: scale(0.75);
+            }
+        }
+
+        .usa_icon_container {
+            @include flex(center, center, 0px, column);
+            @include font(13px, 400, $dark-green, $Gotham);
+            text-align: center;
+            line-height: 120%;
+            text-transform: capitalize;
+        }
+    }
+
+}

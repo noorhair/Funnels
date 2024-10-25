@@ -1,0 +1,151 @@
+@import "@sassConstants";
+@import "@mixins";
+
+.announcing_container {
+    @include flex(center, center, 48px, row);
+    width: 100%;
+    padding: 15px 0px;
+
+    .content {
+        @include flex(center, center, 30px, column);
+        width: 100%;
+        padding: 0px 10px;
+        max-width: 880px;
+        text-align: center;
+
+        .red {
+            color: red;
+        }
+
+        > h1 {
+            font-size: 30px;
+        }
+        > p {
+            font-size: 20px;
+        }
+
+        .card_container {
+            @include flex(center, center, 10px, column);
+            width: 100%;
+            background-color: #f4f2ed;
+            border: 2px solid #525A31;
+            padding: 15px;
+            font-size: 22px;
+
+            @include tablet-small {
+                font-size: 18px;
+            }
+
+            .texto {
+                font-size: 25px;
+                .green {
+                    font-size: 30px;
+                    color: #38761d;
+                }
+            }
+
+            .product_img {
+                padding-top: 20px;
+                width: 100%;
+                max-width: 500px;
+
+                @include tablet-small {
+                    max-width: 270px;
+                }
+                @include mobile-small {
+                    max-width: 100%;
+                }
+
+
+            }
+
+            > h1 {
+                font-size: 30px;
+
+                @include tablet-small {
+                    font-size: 23px;
+
+                }
+
+            }
+
+            .prices {
+                @include flex(center, flex-start, 60px);
+                font-size: 24px;
+                font-weight: 700;
+                margin-top: 10px;
+                @include tablet-small {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+                    font-size: 23px;
+                }
+
+                .value {
+                    font-size: 48px;
+                    @include tablet-small {
+                        font-size: 40px;
+                    }
+                }
+                .label {
+                    font-size: 17px;
+                    color: rgb(99, 106, 123);
+                }
+                .good_price {
+                    color: rgba(42, 187, 77, 1);
+                }
+            }
+
+            .button {
+                padding: 20px 15px;
+                background-color: rgba(42, 187, 77, 1);
+                font-weight: 700;
+                color: white;
+                width: 100%;
+                max-width: 750px;
+                border-radius: 10px;
+                font-size: 19px;
+                cursor: pointer;
+            }
+    
+            .link {
+                font-size: 20px;
+                color: darkblue;
+                font-weight: 700;
+                cursor: pointer;
+                text-decoration: underline;
+                margin-top: 15px;
+            }
+    
+            .adquirientes {
+                max-width: 280px;
+                width: 100%;
+            }
+    
+            .guaranty {
+                max-width: 150px;
+                width: 100%;
+            }
+    
+            .no_button {
+                padding: 15px 15px;
+                background-color: #7f3d16;
+                font-weight: 700;
+                color: white;
+                width: 100%;
+                max-width: 290px;
+                border-radius: 10px;
+                font-size: 22px;
+                cursor: pointer;
+                margin-top: 20px;
+            }
+    
+            .last_paragraph {
+                font-size: 20px;
+                text-align: justify;
+                margin-top: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}

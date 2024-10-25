@@ -1,0 +1,73 @@
+@import "@sassConstants";
+@import "@mixins";
+
+.ingredient_card_container {
+    @include flex(center, center, 0px, column);
+    max-width: 1040px;
+    width: 100%;
+
+    .top_section {
+        @include flex(center, center, 10px, column);
+        width: 100%;
+        padding: 32px 0px;
+
+        @include tablet-small {
+            padding: 24px 0px;
+        }
+
+        .ingredient_text {
+            @include font(38px, 700, $brown, $OpenSans);
+            @include tablet-small {
+                font-size: 22px;
+            }
+        }
+
+        .paragraphs {
+            @include flex(center, center, 0px, column);
+            width: 100%;
+
+            .paragraph {
+                @include font(26px, 700, $dark-green, $OpenSans);
+                text-align: center;
+
+                @include tablet-small {
+                    font-size: 18px;
+                    text-align: center;
+                }
+            }
+        }
+        .plant_name {
+            @include font(32px, 700, $light-green, $OpenSans);
+
+            @include tablet-small {
+                font-size: 22px;
+                text-align: center;
+            }
+        }
+    }
+
+    .content_section {
+        @include flex(flex-start, flex-start, 32px, row);
+        padding: 32px;
+        width: 100%;
+        background-color: $white-color;
+
+        @include tablet-small {
+            flex-direction: column;
+            padding: 16px;
+        }
+
+        .left_section, .rigth_section {
+            width: 50%;
+
+            @include tablet-small {
+                width: 100%;
+            }
+
+            img { width: 100%; }
+
+        }
+
+    }
+
+}

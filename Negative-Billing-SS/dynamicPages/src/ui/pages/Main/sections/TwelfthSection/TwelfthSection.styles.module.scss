@@ -1,0 +1,56 @@
+@import "@sassConstants";
+@import "@mixins";
+
+.section_container {
+    @include flex(flex-start, center, 24px, column);
+    width: 100%;
+    padding: 32px 80px 56px 80px;
+    font-family: $OpenSans;
+
+    @include tablet-small {
+        padding: 24px 16px;
+    }
+
+    .title {
+        @include font(36px, 700, $dark-green, $OpenSans);
+        text-align: center;
+        width: 100%;
+        padding: 32px 0px;
+
+        @include tablet-small {
+            font-size: 26px;
+            padding: 0px 0px 20px 0px;
+        }
+        
+    }
+    
+    .paragraphs_container {
+        @include flex(flex-start, center, 24px, column);
+        width: 100%;
+        p {
+            width: 100%;
+            text-align: left;
+            color: $black-color;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .red {
+            color: $red;
+        }
+    }
+    
+    .image_container {
+        @include flex(flex-start, center, 24px, column);
+        width: 100%;
+
+        img {  width: 100%; }
+
+        .img1 {
+            max-width: 562px;
+        }
+        .img2 {
+            max-width: 436px;
+        }
+    }
+
+}

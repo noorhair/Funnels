@@ -1,0 +1,92 @@
+@import "@sassConstants";
+@import "@mixins";
+
+.announcing_container {
+  @include flex(center, center, 48px, row);
+  width: 100%;
+  font-family: $OpenSans;
+  padding: 56px 200px;
+  background-color: $beige-bg-color;
+
+  @include laptop-small {
+    padding: 16px;
+  }
+
+  .content {
+    @include flex(center, center, 25px, column);
+    @include font(16px, 700, $dark-green, $OpenSans);
+    width: 100%;
+    border-radius: 8px;
+    padding: 32px;
+    background-color: $white-color;
+    text-align: center;
+    text-transform: capitalize;
+    max-width: 1040px;
+    letter-spacing: -1.14px;
+
+    @include laptop-small {
+      padding: 16px 8px;
+      gap: 8px;
+    }
+
+    h1 {
+      @include font(38px, 700, $dark-green, $OpenSans);
+      text-align: center;
+
+      @include laptop-small {
+        @include font(20px, 700, $dark-green, $OpenSans);
+      }
+    }
+
+    h2 {
+      font-size: 25px;
+      font-style: italic;
+
+      @include laptop-small {
+        display: none;
+      }
+    }
+
+    img {
+      max-width: 360px;
+
+      @include laptop-small {
+        max-width: 190px;
+      }
+    }
+
+    .stars_container {
+      @include flex(center, center, 8px, row);
+      font-size: 18px;
+
+      @include laptop-small {
+        font-size: 14px;
+        font-family: $OpenSans;
+      }
+    }
+
+    h1:last-child {
+      max-width: 792px;
+    }
+
+    .button {
+      @include font(22px, 700, $white-color, $OpenSans);
+      border-radius: 12px;
+      background: #2abb4d;
+      padding: 16px 24px;
+      width: 50%;
+      max-width: 800px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      @include laptop-small {
+        padding: 16px 12px;
+        font-size: 20px;
+        width: 90%;
+      }
+
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@import "../../../styles//mixins.scss";
+.container {
+    @include flex(flex-start, center, 5px, row);
+    width: 100%;
+    font-size: 15px;
+}

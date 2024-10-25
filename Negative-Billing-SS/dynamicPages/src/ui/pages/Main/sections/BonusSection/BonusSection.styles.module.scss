@@ -1,0 +1,85 @@
+@import "@sassConstants";
+@import "@mixins";
+
+$bottom-gap: 10px;
+
+.section_container {
+	@include flex(center, center, 24px, column);
+	width: 100%;
+	padding: 56px 80px 0px 80px;
+	font-family: $OpenSans;
+
+	@include tablet-small {
+		padding: 24px 16px;
+	}
+
+	.title {
+		@include font(36px, 700, $dark-green, $OpenSans);
+		text-align: center;
+		width: 100%;
+		padding: 32px 0px;
+
+		@include tablet-small {
+			font-size: 26px;
+		}
+	}
+
+	.content {
+		.columns_container {
+			@include flex(flex-start, flex-start, 0px, row);
+			align-items: stretch;
+
+			@include laptop-small {
+				flex-direction: column;
+			}
+		}
+
+		.vip_container {
+			background-color: $beige-bg-color;
+
+			.vip_description {
+				@include flex(center, center, 0px, row);
+				@include laptop-small {
+					flex-direction: column;
+				}
+				img {
+					width: 50%;
+					margin: 0 auto;
+					flex: 1 1 50%;
+					margin-bottom: $bottom-gap;
+					padding: 20px;
+
+					@include tablet-small {
+						padding: 20px 0;
+					}
+				}
+
+				p {
+					width: 95%;
+					@include font(16px, 400, $black-color, $OpenSans);
+					text-align: start;
+					font-size: 18px;
+					padding: 0px 15px;
+					span {
+						text-decoration: underline;
+					}
+					flex: 1 1 50%;
+					margin-bottom: $bottom-gap;
+				}
+			}
+			.vip_title {
+				text-align: center;
+				@include font(22px, 700, $black-color, $OpenSans);
+				font-weight: 700 !important;
+				margin-bottom: $bottom-gap;
+				span {
+					text-decoration: line-through;
+				}
+
+				b {
+					color: red;
+				}
+			}
+		}
+	}
+}

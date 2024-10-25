@@ -1,0 +1,58 @@
+html {
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --color-button: #595a31;
+  --gradient-background: #1b281d;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.red_text {
+  color: red;
+}
+
+.text_decoration_underline {
+  text-decoration-line: underline;
+}
+
+sup {
+  font-size: 12px;
+}
+
+.discover {
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../src/assets/fonts/Gotham.woff2") format("woff2");
+}

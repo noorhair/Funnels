@@ -1,0 +1,56 @@
+@import "@sassConstants";
+@import "@mixins";
+
+.header_container {
+    @include flex(center, center, 48px, row);
+    padding: 16px 80px;
+    background-color: $beige-bg-upsells;
+    height: 61.9px;
+    @include tablet-small {
+        height: 30.1px;
+    }
+    img {
+        width: 250px;
+        @include tablet-small {
+            max-width: 180px;
+        }
+    }
+}
+.steps_container {
+    @include flex(center, center, 16px);
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 40px;
+    padding: 0px 10px;
+    font-family: $System;
+    @include tablet-small {
+        gap: 0px;
+        margin-top: 15px;
+    }
+    .div_step1 {
+        padding: 16px 24px;
+        background-color: #dfe1d7;
+        border-radius: 10px;
+        @include tablet-small {
+            font-size: 11px;
+            padding: 6px 4px 6px 7px;
+            border-radius: 4px;
+        }
+    }
+    .div_step2 {
+        padding: 24px 48px 24px 24px;
+        background-color: #535a31;
+        color: $white-color;
+        border-radius: 10px;
+        font-size: 24px;
+        clip-path: polygon(0% 0%, 0% 100%, calc(100% - 40px) 100%, 100% 50%, calc(100% - 40px) 0%);
+        @include tablet-small {
+            font-size: 12px;
+            padding: 11px 24px 11px 7px;
+            border-radius: 4px;
+            clip-path: polygon(0% 0%,0% 100%, calc(100% - 18px) 100%, 100% 50%,calc(100% - 18px) 0%);
+        }
+    }
+
+ }
+ 

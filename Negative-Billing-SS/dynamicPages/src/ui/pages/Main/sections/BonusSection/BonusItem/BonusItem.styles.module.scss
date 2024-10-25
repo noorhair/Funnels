@@ -1,0 +1,72 @@
+@import "@sassConstants";
+@import "@mixins";
+
+$bottom-gap: 10px;
+
+.item_container {
+	background-color: $beige-bg-color;
+	@include flex(flex-start, flex-start, 0px, column);
+
+	.text_container {
+		@include flex(center, center, 0px, column);
+	}
+
+	&.full_width {
+		width: 50%;
+		margin: 0 auto;
+
+		@include laptop-small {
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+	.text {
+		width: 95%;
+		@include font(16px, 400, $black-color, $OpenSans);
+		text-align: start;
+		h4 {
+			text-align: center;
+		}
+		p {
+			font-size: 18px;
+		}
+	}
+
+	img {
+		display: block;
+		width: 60%;
+		margin: 0 auto;
+		padding: 20px 0px;
+	}
+	padding: 0px 10px;
+
+	.full_width {
+		width: 80%;
+	}
+
+	h3 {
+		text-align: center;
+		@include font(22px, 700, $black-color, $OpenSans);
+		font-weight: 700 !important;
+		margin-bottom: $bottom-gap;
+	}
+
+	.text {
+		h4, h3 {
+			span {
+				text-decoration: line-through;
+			}
+			b {
+				color: red;
+				font-weight: 700 !important;
+			}
+			margin-bottom: $bottom-gap;
+		}
+
+		b {
+			font-weight: 700 !important;
+		}
+		margin-bottom: $bottom-gap;
+	}
+}

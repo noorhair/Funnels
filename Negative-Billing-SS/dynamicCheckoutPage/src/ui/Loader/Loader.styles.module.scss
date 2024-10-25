@@ -1,0 +1,59 @@
+
+@import "@mixins";
+
+.container {
+    @include flex(center, center, 8px, column);
+    position: fixed; /* Stay in place */
+    z-index: 60; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    backdrop-filter: blur(2px); /* Puedes ajustar el valor de '10px' según el nivel de desenfoque que desees */
+    background-color: rgba($color: #000000, $alpha: 0.1);
+
+    svg {
+        width: 70px;
+        transform-origin: center;
+        animation: rotate4 2s linear infinite;
+    }
+       
+    circle {
+        fill: none;
+        stroke: #000;
+        strokeWidth: 2;
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+        stroke-linecap: round;
+        animation: dash4 1.5s ease-in-out infinite;
+    }
+
+    span {
+        color: #000;
+        font-size: 15px;
+    }
+       
+    @keyframes rotate4 {
+        100% {
+         transform: rotate(360deg);
+        }
+    }
+       
+    @keyframes dash4 {
+        0% {
+         stroke-dasharray: 1, 200;
+         stroke-dashoffset: 0;
+        }
+       
+        50% {
+         stroke-dasharray: 90, 200;
+         stroke-dashoffset: -35px;
+        }
+       
+        100% {
+         stroke-dashoffset: -125px;
+        }
+    }
+
+}
